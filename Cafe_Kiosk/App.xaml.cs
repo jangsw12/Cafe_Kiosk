@@ -1,4 +1,6 @@
-﻿using Cafe_Kiosk.ViewModels;
+﻿using Cafe_Kiosk.Services;
+using Cafe_Kiosk.Stores;
+using Cafe_Kiosk.ViewModels;
 using Cafe_Kiosk.Views;
 using Microsoft.Extensions.DependencyInjection;
 using System.Configuration;
@@ -25,8 +27,17 @@ namespace Cafe_Kiosk
         {
             var services = new ServiceCollection();
 
+            // Stores
+            services.AddSingleton<MainNavigationStore>();
+
+            // Services
+            services.AddSingleton<INavigationService, NavigationService>();
+
             // ViewModels
             services.AddSingleton<MainViewModel>();
+            services.AddSingleton<FirstViewModel>();
+            services.AddSingleton<SecondViewModel>();
+            services.AddSingleton<ThirdViewModel>();
 
             // Views
             services.AddSingleton(s => new MainView()

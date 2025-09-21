@@ -11,12 +11,10 @@ C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\bin\Debug\net
 C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
 C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\Cafe_Kiosk.csproj.AssemblyReference.cache
-C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\Views\MainView.g.cs
 C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\Cafe_Kiosk_MarkupCompile.cache
 C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\Cafe_Kiosk_MarkupCompile.lref
-C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\Views\MainView.baml
 C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\Cafe_Kiosk.g.resources
 C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\Cafe_Kiosk.GeneratedMSBuildEditorConfig.editorconfig
@@ -29,3 +27,11 @@ C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net
 C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\Cafe_Kiosk.pdb
 C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\Cafe_Kiosk.genruntimeconfig.cache
 C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\ref\Cafe_Kiosk.dll
+C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\Views\FirstView.g.cs
+C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\Views\SecondView.g.cs
+C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\Views\ThirdView.g.cs
+C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\Views\FirstView.baml
+C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\Views\SecondView.baml
+C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\Views\ThirdView.baml
+C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\Cafe_Kiosk.sourcelink.json
+C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs

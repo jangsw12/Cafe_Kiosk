@@ -1,6 +1,9 @@
-﻿using CommunityToolkit.Mvvm.Input;
+﻿using Cafe_Kiosk.Services;
+using Cafe_Kiosk.Stores;
+using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,18 +12,35 @@ using System.Windows.Input;
 
 namespace Cafe_Kiosk.ViewModels
 {
-    public class MainViewModel
+    public class MainViewModel : ViewModelBase
     {
-        public ICommand TestClickCommand { get; set; }
+        private readonly MainNavigationStore _mainNavigationStore;
+        private INotifyPropertyChanged? _currentViewModel;
 
-        public MainViewModel()
+        public INotifyPropertyChanged? CurrentViewModel
         {
-            TestClickCommand = new RelayCommand<object>(TestClick);
+            get { return _currentViewModel; }
+            set { 
+                if (_currentViewModel != value)
+                {
+                    _currentViewModel = value;
+                    OnPropertyChanged();
+                }
+            }
         }
 
-        private void TestClick(object _)
+
+        private void CurrentViewModelChanged()
         {
-            MessageBox.Show("프로그램 시작");
+            CurrentViewModel = _mainNavigationStore.CurrentViewModel;
+        }
+
+        public MainViewModel(MainNavigationStore mainNavigationStore, INavigationService navigationService)
+        {
+            _mainNavigationStore = mainNavigationStore;
+            _mainNavigationStore.CurrentViewModelChanged += CurrentViewModelChanged;
+
+            navigationService.Navigate(NaviType.SecondView);
         }
     }
 }

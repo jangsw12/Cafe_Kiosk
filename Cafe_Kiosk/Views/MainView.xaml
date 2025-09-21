@@ -4,21 +4,35 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cafe_Kiosk.Views"
+        xmlns:vm="clr-namespace:Cafe_Kiosk.ViewModels"
         mc:Ignorable="d"
         Title="MainView" Height="450" Width="800">
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type vm:FirstViewModel}">
+            <local:FirstView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:SecondViewModel}">
+            <local:SecondView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:ThirdViewModel}">
+            <local:ThirdView/>
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="3*"/>
             <RowDefinition/>
+            <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
         
+        <!--Title-->
         <TextBlock Grid.Row="0"
                    Text="카페 키오스크 프로그램"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
                    FontSize="35"/>
-        <Button Grid.Row="1"
-                Content="test btn"
-                Command="{Binding TestClickCommand}"/>
+        
+        <!--Body-->
+        <ContentControl Grid.Row="1"
+                        Content="{Binding CurrentViewModel}"/>
     </Grid>
 </Window>

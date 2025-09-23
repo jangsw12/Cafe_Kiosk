@@ -14,7 +14,10 @@ namespace Cafe_Kiosk.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
+        // Properties
         private readonly MainNavigationStore _mainNavigationStore;
+        private readonly INavigationService _navigationService;
+
         private INotifyPropertyChanged? _currentViewModel;
 
         public INotifyPropertyChanged? CurrentViewModel
@@ -29,18 +32,19 @@ namespace Cafe_Kiosk.ViewModels
             }
         }
 
+        // Methods
+        public MainViewModel(MainNavigationStore mainNavigationStore, INavigationService navigationService)
+        {
+            _mainNavigationStore = mainNavigationStore;
+            _navigationService = navigationService;
+            _mainNavigationStore.CurrentViewModelChanged += CurrentViewModelChanged;
+
+            _navigationService.Navigate(NaviType.MenuView);
+        }
 
         private void CurrentViewModelChanged()
         {
             CurrentViewModel = _mainNavigationStore.CurrentViewModel;
-        }
-
-        public MainViewModel(MainNavigationStore mainNavigationStore, INavigationService navigationService)
-        {
-            _mainNavigationStore = mainNavigationStore;
-            _mainNavigationStore.CurrentViewModelChanged += CurrentViewModelChanged;
-
-            navigationService.Navigate(NaviType.SecondView);
         }
     }
 }

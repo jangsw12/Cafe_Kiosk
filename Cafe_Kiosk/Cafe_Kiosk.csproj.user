@@ -7,30 +7,36 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\FirstView.xaml.cs">
+    <Compile Update="Views\CartView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\MainView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\SecondView.xaml.cs">
+    <Compile Update="Views\MenuOptionView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\ThirdView.xaml.cs">
+    <Compile Update="Views\MenuView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\PaymentView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Views\FirstView.xaml">
+    <Page Update="Views\CartView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MainView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\SecondView.xaml">
+    <Page Update="Views\MenuOptionView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\ThirdView.xaml">
+    <Page Update="Views\MenuView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\PaymentView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

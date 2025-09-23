@@ -53,7 +53,7 @@ namespace Cafe_Kiosk.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Cafe_Kiosk;component/views/thirdview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Cafe_Kiosk;V1.0.0.0;component/views/thirdview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\ThirdView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

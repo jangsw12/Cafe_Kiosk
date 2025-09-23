@@ -1,0 +1,15 @@
+﻿<Window x:Class="Cafe_Kiosk.Views.MenuOptionView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cafe_Kiosk.Views"
+        mc:Ignorable="d"
+        Title="MenuOptionView" Height="960" Width="540">
+    <Grid Background="LightPink">
+        <TextBlock Text="옵션 창"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="35"/>
+    </Grid>
+</Window>

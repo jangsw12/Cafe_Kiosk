@@ -1,4 +1,6 @@
 ﻿using Cafe_Kiosk.Services;
+using Cafe_Kiosk.Services.Dialog;
+using Cafe_Kiosk.Services.MenuData;
 using Cafe_Kiosk.Stores;
 using Cafe_Kiosk.ViewModels;
 using Cafe_Kiosk.Views;
@@ -32,12 +34,15 @@ namespace Cafe_Kiosk
 
             // Services
             services.AddSingleton<INavigationService, NavigationService>();
+            services.AddSingleton<IMenuDataService, MenuDataService>();
+            services.AddSingleton<IDialogService, DialogService>();
 
             // ViewModels
             services.AddSingleton<MainViewModel>();
-            services.AddSingleton<FirstViewModel>();
-            services.AddSingleton<SecondViewModel>();
-            services.AddSingleton<ThirdViewModel>();
+            services.AddSingleton<MenuViewModel>();
+            services.AddSingleton<CartViewModel>();
+            services.AddSingleton<PaymentViewModel>();
+            services.AddSingleton<MenuOptionViewModel>();
 
             // Views
             services.AddSingleton(s => new MainView()

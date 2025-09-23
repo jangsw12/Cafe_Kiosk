@@ -3,60 +3,100 @@
   "WorkspaceRootPath": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\services\\navigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\services\\navigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\views\\menuview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\views\\menuview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\services\\navitype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\services\\navitype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\views\\menuoptionview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\views\\menuoptionview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\models\\cafemenuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\models\\cafemenuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\viewmodels\\menuoptionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\viewmodels\\menuoptionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\viewmodels\\menuviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\viewmodels\\menuviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\services\\menudata\\menudataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\services\\menudata\\menudataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\services\\dialog\\dialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\services\\dialog\\dialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\services\\dialog\\idialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\services\\dialog\\idialogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\services\\menudata\\imenudataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\services\\menudata\\imenudataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\views\\mainview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\views\\mainview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\views\\thirdview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\views\\thirdview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\viewmodels\\paymentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\viewmodels\\paymentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\views\\secondview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\views\\secondview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\views\\firstview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\views\\firstview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\viewmodels\\firstviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\viewmodels\\firstviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\viewmodels\\secondviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\viewmodels\\secondviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\viewmodels\\thirdviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\viewmodels\\thirdviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\viewmodels\\cartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\viewmodels\\cartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\stores\\mainnavigationstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\stores\\mainnavigationstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\services\\navigation\\navitype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\services\\navigation\\navitype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\services\\inavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\services\\inavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\services\\navigation\\navigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\services\\navigation\\navigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\services\\navigation\\inavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\services\\navigation\\inavigationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\views\\mainview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\views\\mainview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\views\\mainview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\views\\mainview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\views\\paymentview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\views\\paymentview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\views\\cartview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\views\\cartview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\views\\cartview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\views\\cartview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|solutionrelative:cafe_kiosk\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7F3E5056-CDFA-4AF0-A26E-2520697A74F6}|Cafe_Kiosk\\Cafe_Kiosk.csproj|c:\\users\\\uC7A5\uC131\uC6B0\\documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\cafe_kiosk\\cafe_kiosk\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -69,190 +109,298 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 171,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MenuOptionViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\MenuOptionViewModel.cs",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\ViewModels\\MenuOptionViewModel.cs",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\MenuOptionViewModel.cs",
+              "RelativeToolTip": "Cafe_Kiosk\\ViewModels\\MenuOptionViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T02:05:30.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MenuOptionView.xaml",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Views\\MenuOptionView.xaml",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\Views\\MenuOptionView.xaml",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Views\\MenuOptionView.xaml",
+              "RelativeToolTip": "Cafe_Kiosk\\Views\\MenuOptionView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-23T02:05:19.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MenuView.xaml",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Views\\MenuView.xaml",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\Views\\MenuView.xaml",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Views\\MenuView.xaml",
+              "RelativeToolTip": "Cafe_Kiosk\\Views\\MenuView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-22T02:35:39.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MenuDataService.cs",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Services\\MenuData\\MenuDataService.cs",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\Services\\MenuData\\MenuDataService.cs",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Services\\MenuData\\MenuDataService.cs",
+              "RelativeToolTip": "Cafe_Kiosk\\Services\\MenuData\\MenuDataService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T00:58:40.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CafeMenuItem.cs",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Models\\CafeMenuItem.cs",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\Models\\CafeMenuItem.cs",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Models\\CafeMenuItem.cs",
+              "RelativeToolTip": "Cafe_Kiosk\\Models\\CafeMenuItem.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAACgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T02:58:17.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "MenuViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\MenuViewModel.cs",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\ViewModels\\MenuViewModel.cs",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\MenuViewModel.cs",
+              "RelativeToolTip": "Cafe_Kiosk\\ViewModels\\MenuViewModel.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAEwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T02:35:52.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IDialogService.cs",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Services\\Dialog\\IDialogService.cs",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\Services\\Dialog\\IDialogService.cs",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Services\\Dialog\\IDialogService.cs",
+              "RelativeToolTip": "Cafe_Kiosk\\Services\\Dialog\\IDialogService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T03:08:16.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DialogService.cs",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Services\\Dialog\\DialogService.cs",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\Services\\Dialog\\DialogService.cs",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Services\\Dialog\\DialogService.cs",
+              "RelativeToolTip": "Cafe_Kiosk\\Services\\Dialog\\DialogService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T03:08:36.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IMenuDataService.cs",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Services\\MenuData\\IMenuDataService.cs",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\Services\\MenuData\\IMenuDataService.cs",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Services\\MenuData\\IMenuDataService.cs",
+              "RelativeToolTip": "Cafe_Kiosk\\Services\\MenuData\\IMenuDataService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T02:43:42.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\App.xaml.cs",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\App.xaml.cs",
+              "RelativeToolTip": "Cafe_Kiosk\\App.xaml.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAACkAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T12:46:48.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ViewModelBase.cs",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\ViewModelBase.cs",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\ViewModels\\ViewModelBase.cs",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\ViewModelBase.cs",
+              "RelativeToolTip": "Cafe_Kiosk\\ViewModels\\ViewModelBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T04:19:36.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PaymentViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\PaymentViewModel.cs",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\ViewModels\\PaymentViewModel.cs",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\PaymentViewModel.cs",
+              "RelativeToolTip": "Cafe_Kiosk\\ViewModels\\PaymentViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T00:39:21.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\ViewModels\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "Cafe_Kiosk\\ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T12:46:35.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CartViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\CartViewModel.cs",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\ViewModels\\CartViewModel.cs",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\CartViewModel.cs",
+              "RelativeToolTip": "Cafe_Kiosk\\ViewModels\\CartViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-22T03:06:14.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "NaviType.cs",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Services\\Navigation\\NaviType.cs",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\Services\\Navigation\\NaviType.cs",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Services\\Navigation\\NaviType.cs",
+              "RelativeToolTip": "Cafe_Kiosk\\Services\\Navigation\\NaviType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T04:12:52.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "NavigationService.cs",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Services\\Navigation\\NavigationService.cs",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\Services\\Navigation\\NavigationService.cs",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Services\\Navigation\\NavigationService.cs",
+              "RelativeToolTip": "Cafe_Kiosk\\Services\\Navigation\\NavigationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T04:11:09.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "INavigationService.cs",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Services\\Navigation\\INavigationService.cs",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\Services\\Navigation\\INavigationService.cs",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Services\\Navigation\\INavigationService.cs",
+              "RelativeToolTip": "Cafe_Kiosk\\Services\\Navigation\\INavigationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T04:11:14.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MainNavigationStore.cs",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Stores\\MainNavigationStore.cs",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\Stores\\MainNavigationStore.cs",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Stores\\MainNavigationStore.cs",
+              "RelativeToolTip": "Cafe_Kiosk\\Stores\\MainNavigationStore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T04:14:06.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "MainView.xaml",
               "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Views\\MainView.xaml",
               "RelativeDocumentMoniker": "Cafe_Kiosk\\Views\\MainView.xaml",
               "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Views\\MainView.xaml",
               "RelativeToolTip": "Cafe_Kiosk\\Views\\MainView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-20T12:46:28.242Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-20T12:46:28.242Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NavigationService.cs",
-              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Services\\NavigationService.cs",
-              "RelativeDocumentMoniker": "Cafe_Kiosk\\Services\\NavigationService.cs",
-              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Services\\NavigationService.cs",
-              "RelativeToolTip": "Cafe_Kiosk\\Services\\NavigationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 19,
+              "Title": "MainView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Views\\MainView.xaml.cs",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\Views\\MainView.xaml.cs",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Views\\MainView.xaml.cs",
+              "RelativeToolTip": "Cafe_Kiosk\\Views\\MainView.xaml.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T04:11:09.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-23T02:58:36.613Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FirstView.xaml",
-              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Views\\FirstView.xaml",
-              "RelativeDocumentMoniker": "Cafe_Kiosk\\Views\\FirstView.xaml",
-              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Views\\FirstView.xaml",
-              "RelativeToolTip": "Cafe_Kiosk\\Views\\FirstView.xaml",
+              "DocumentIndex": 20,
+              "Title": "PaymentView.xaml",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Views\\PaymentView.xaml",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\Views\\PaymentView.xaml",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Views\\PaymentView.xaml",
+              "RelativeToolTip": "Cafe_Kiosk\\Views\\PaymentView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-21T04:18:56.319Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-23T00:38:37.313Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\App.xaml.cs",
-              "RelativeDocumentMoniker": "Cafe_Kiosk\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\App.xaml.cs",
-              "RelativeToolTip": "Cafe_Kiosk\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "DocumentIndex": 21,
+              "Title": "CartView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Views\\CartView.xaml.cs",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\Views\\CartView.xaml.cs",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Views\\CartView.xaml.cs",
+              "RelativeToolTip": "Cafe_Kiosk\\Views\\CartView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-20T12:46:48.024Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-23T03:09:09.587Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "Cafe_Kiosk\\ViewModels\\MainViewModel.cs",
-              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\MainViewModel.cs",
-              "RelativeToolTip": "Cafe_Kiosk\\ViewModels\\MainViewModel.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACoAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-20T12:46:35.168Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NaviType.cs",
-              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Services\\NaviType.cs",
-              "RelativeDocumentMoniker": "Cafe_Kiosk\\Services\\NaviType.cs",
-              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Services\\NaviType.cs",
-              "RelativeToolTip": "Cafe_Kiosk\\Services\\NaviType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T04:12:52.133Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ThirdView.xaml",
-              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Views\\ThirdView.xaml",
-              "RelativeDocumentMoniker": "Cafe_Kiosk\\Views\\ThirdView.xaml",
-              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Views\\ThirdView.xaml",
-              "RelativeToolTip": "Cafe_Kiosk\\Views\\ThirdView.xaml",
+              "DocumentIndex": 22,
+              "Title": "CartView.xaml",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Views\\CartView.xaml",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\Views\\CartView.xaml",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Views\\CartView.xaml",
+              "RelativeToolTip": "Cafe_Kiosk\\Views\\CartView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-21T04:19:16.923Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-22T03:06:08.645Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SecondView.xaml",
-              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Views\\SecondView.xaml",
-              "RelativeDocumentMoniker": "Cafe_Kiosk\\Views\\SecondView.xaml",
-              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Views\\SecondView.xaml",
-              "RelativeToolTip": "Cafe_Kiosk\\Views\\SecondView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-21T04:19:08.328Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FirstViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\FirstViewModel.cs",
-              "RelativeDocumentMoniker": "Cafe_Kiosk\\ViewModels\\FirstViewModel.cs",
-              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\FirstViewModel.cs",
-              "RelativeToolTip": "Cafe_Kiosk\\ViewModels\\FirstViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "DocumentIndex": 23,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "Cafe_Kiosk\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\RelayCommand.cs",
+              "RelativeToolTip": "Cafe_Kiosk\\RelayCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T04:18:19.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-22T02:48:26.178Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SecondViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\SecondViewModel.cs",
-              "RelativeDocumentMoniker": "Cafe_Kiosk\\ViewModels\\SecondViewModel.cs",
-              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\SecondViewModel.cs",
-              "RelativeToolTip": "Cafe_Kiosk\\ViewModels\\SecondViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T04:18:28.396Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ThirdViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\ThirdViewModel.cs",
-              "RelativeDocumentMoniker": "Cafe_Kiosk\\ViewModels\\ThirdViewModel.cs",
-              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\ThirdViewModel.cs",
-              "RelativeToolTip": "Cafe_Kiosk\\ViewModels\\ThirdViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T04:18:34.546Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MainNavigationStore.cs",
-              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Stores\\MainNavigationStore.cs",
-              "RelativeDocumentMoniker": "Cafe_Kiosk\\Stores\\MainNavigationStore.cs",
-              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Stores\\MainNavigationStore.cs",
-              "RelativeToolTip": "Cafe_Kiosk\\Stores\\MainNavigationStore.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T04:14:06.541Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ViewModelBase.cs",
-              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\ViewModelBase.cs",
-              "RelativeDocumentMoniker": "Cafe_Kiosk\\ViewModels\\ViewModelBase.cs",
-              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\ViewModels\\ViewModelBase.cs",
-              "RelativeToolTip": "Cafe_Kiosk\\ViewModels\\ViewModelBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T04:19:36.562Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "INavigationService.cs",
-              "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Services\\INavigationService.cs",
-              "RelativeDocumentMoniker": "Cafe_Kiosk\\Services\\INavigationService.cs",
-              "ToolTip": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\Services\\INavigationService.cs",
-              "RelativeToolTip": "Cafe_Kiosk\\Services\\INavigationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T04:11:14.065Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 24,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\\uC7A5\uC131\uC6B0\\Documents\\\uD3EC\uD2B8\uD3F4\uB9AC\uC624\\Cafe_Kiosk\\Cafe_Kiosk\\App.xaml",
               "RelativeDocumentMoniker": "Cafe_Kiosk\\App.xaml",

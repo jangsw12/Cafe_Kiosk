@@ -6,33 +6,64 @@
         xmlns:local="clr-namespace:Cafe_Kiosk.Views"
         xmlns:vm="clr-namespace:Cafe_Kiosk.ViewModels"
         mc:Ignorable="d"
-        Title="MainView" Height="450" Width="800">
+        Title="MainView" Height="1280" Width="720">
     <Window.Resources>
-        <DataTemplate DataType="{x:Type vm:FirstViewModel}">
-            <local:FirstView/>
+        <DataTemplate DataType="{x:Type vm:MenuViewModel}">
+            <local:MenuView/>
         </DataTemplate>
-        <DataTemplate DataType="{x:Type vm:SecondViewModel}">
-            <local:SecondView/>
+        <DataTemplate DataType="{x:Type vm:CartViewModel}">
+            <local:CartView/>
         </DataTemplate>
-        <DataTemplate DataType="{x:Type vm:ThirdViewModel}">
-            <local:ThirdView/>
+        <DataTemplate DataType="{x:Type vm:PaymentViewModel}">
+            <local:PaymentView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:MenuOptionViewModel}">
+            <local:MenuOptionView/>
         </DataTemplate>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="3*"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="200"/>
         </Grid.RowDefinitions>
-        
-        <!--Title-->
+
+        <!--Logo-->
         <TextBlock Grid.Row="0"
-                   Text="카페 키오스크 프로그램"
+                   Text="Cafe Kiosk Program"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
-                   FontSize="35"/>
+                   FontWeight="Bold"
+                   FontSize="20"/>
+
+        <!--Button-->
+        <Grid Grid.Row="1">
+            <TextBlock Text="버튼들... 클릭으로 화면 전환"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="30"/>
+        </Grid>
         
-        <!--Body-->
-        <ContentControl Grid.Row="1"
+        <!--Menu View-->
+        <ContentControl Grid.Row="2"
+                        Margin="10"
                         Content="{Binding CurrentViewModel}"/>
+        
+        <Grid Grid.Row="3"
+              Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/> 
+            </Grid.ColumnDefinitions>
+
+            <!--Cart View-->
+            <local:CartView Grid.Column="0"
+                            Margin="10"/>
+
+            <!--Payment View-->
+            <local:PaymentView Grid.Column="1"
+                               Margin="10"/>
+        </Grid>
     </Grid>
 </Window>

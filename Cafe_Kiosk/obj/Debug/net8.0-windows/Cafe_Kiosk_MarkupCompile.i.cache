@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\App.xaml
-4-1662087833
+5-463924800
 
-18-619591637
+261357937924
 205-164578775
-Views\FirstView.xaml;Views\MainView.xaml;Views\SecondView.xaml;Views\ThirdView.xaml;
+Views\CartView.xaml;Views\MainView.xaml;Views\MenuOptionView.xaml;Views\MenuView.xaml;Views\PaymentView.xaml;
 
 False
 

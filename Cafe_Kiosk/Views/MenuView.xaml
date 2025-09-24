@@ -25,7 +25,7 @@
                                 Margin="5"
                                 Padding="10">
                             <StackPanel>
-                                <Image Source="{Binding Image}" Height="100" Stretch="UniformToFill" Margin="0 0 0 10"/>
+                                <Image Source="{Binding ImageUri}" Height="110" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 10"/>
                                 <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" TextAlignment="Center"/>
                                 <TextBlock Text="{Binding Price, StringFormat={}{0:N0}원}" FontSize="14" Foreground="Gray" TextAlignment="Center"/>
                             </StackPanel>

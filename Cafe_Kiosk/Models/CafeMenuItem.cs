@@ -2,10 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Imaging;
 
 namespace Cafe_Kiosk.Models
 {
@@ -16,7 +18,7 @@ namespace Cafe_Kiosk.Models
         public string Name
         {
             get { return _name; }
-            set { 
+            set {
                 _name = value;
                 OnPropertyChanged();
             }
@@ -43,6 +45,14 @@ namespace Cafe_Kiosk.Models
             {
                 _image = value;
                 OnPropertyChanged();
+            }
+        }
+
+        public Uri ImageUri 
+        {
+            get
+            {
+                return new Uri($"/Cafe_Kiosk;component/{Image}", UriKind.Relative);
             }
         }
     }

@@ -38,4 +38,3 @@ C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net
 C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\Views\MenuOptionView.g.cs
 C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\obj\Debug\net8.0-windows\Views\MenuOptionView.baml
 C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\bin\Debug\net8.0-windows\Data\menu.xml
-C:\Users\장성우\Documents\포트폴리오\Cafe_Kiosk\Cafe_Kiosk\bin\Debug\net8.0-windows\Images\americano.png

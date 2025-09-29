@@ -1,0 +1,18 @@
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.log
+*.cache
+*.pdb
+*.exe
+*.dll
+*.nupkg
+*.nuspec
+*.zip
+*.msi
+
+# OS 관련 불필요 파일
+Thumbs.db
+.DS_Store

@@ -1,4 +1,5 @@
 ﻿using Cafe_Kiosk.Models;
+using Cafe_Kiosk.Services.Cart;
 using Cafe_Kiosk.ViewModels;
 using Cafe_Kiosk.Views;
 using System;
@@ -12,9 +13,17 @@ namespace Cafe_Kiosk.Services.Dialog
 {
     public class DialogService : IDialogService
     {
+        private Window _window;
+        private readonly ICartService _cartService;
+
+        public DialogService(ICartService cartService)
+        {
+            _cartService = cartService;
+        }
+
         public void ShowMenuOptionDialog(CafeMenuItem menuItem)
         {
-            var _menuOptionView = new MenuOptionView()
+            _window = new MenuOptionView()
             {
                 Width = Application.Current.MainWindow.ActualWidth * 0.75,
                 Height = Application.Current.MainWindow.ActualHeight * 0.75,
@@ -22,13 +31,19 @@ namespace Cafe_Kiosk.Services.Dialog
                 WindowStartupLocation = WindowStartupLocation.Manual
             };
 
-            _menuOptionView.Left = Application.Current.MainWindow.Left +
-                                   (Application.Current.MainWindow.Width - _menuOptionView.Width) / 2;
-            _menuOptionView.Top = Application.Current.MainWindow.Top + 
-                                   (Application.Current.MainWindow.Height - _menuOptionView.Height) / 2;
+            _window.Left = Application.Current.MainWindow.Left +
+                                   (Application.Current.MainWindow.Width - _window.Width) / 2;
+            _window.Top = Application.Current.MainWindow.Top + 
+                                   (Application.Current.MainWindow.Height - _window.Height) / 2;
 
-            _menuOptionView.DataContext = new MenuOptionViewModel(menuItem);
-            _menuOptionView.ShowDialog();
+            _window.DataContext = new MenuOptionViewModel(menuItem, this, _cartService);
+            _window.ShowDialog();
+        }
+
+        public void CloseMenuOptionDialog()
+        {
+            _window?.Close();
+            _window = null;
         }
     }
 }

@@ -18,6 +18,9 @@ namespace Cafe_Kiosk.ViewModels
         private readonly MainNavigationStore _mainNavigationStore;
         private readonly INavigationService _navigationService;
 
+        public CartViewModel _cartViewModel { get; }
+        public PaymentViewModel _paymentViewModel { get; }
+
         private INotifyPropertyChanged? _currentViewModel;
 
         public INotifyPropertyChanged? CurrentViewModel
@@ -33,10 +36,14 @@ namespace Cafe_Kiosk.ViewModels
         }
 
         // Methods
-        public MainViewModel(MainNavigationStore mainNavigationStore, INavigationService navigationService)
+        public MainViewModel(MainNavigationStore mainNavigationStore, INavigationService navigationService, 
+                             CartViewModel cartViewModel, PaymentViewModel paymentViewModel)
         {
             _mainNavigationStore = mainNavigationStore;
             _navigationService = navigationService;
+            _cartViewModel = cartViewModel;
+            _paymentViewModel = paymentViewModel;
+
             _mainNavigationStore.CurrentViewModelChanged += CurrentViewModelChanged;
 
             _navigationService.Navigate(NaviType.MenuView);

@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace Cafe_Kiosk.Views
 {
     /// <summary>
-    /// MenuOptionView.xaml에 대한 상호 작용 논리
+    /// CartView.xaml에 대한 상호 작용 논리
     /// </summary>
     public partial class MenuOptionView : Window
     {

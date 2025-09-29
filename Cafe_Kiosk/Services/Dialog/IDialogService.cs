@@ -10,5 +10,6 @@ namespace Cafe_Kiosk.Services.Dialog
     public interface IDialogService
     {
         void ShowMenuOptionDialog(CafeMenuItem menuItem);
+        void CloseMenuOptionDialog();
     }
 }

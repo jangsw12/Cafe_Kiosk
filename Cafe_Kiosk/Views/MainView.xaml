@@ -11,15 +11,6 @@
         <DataTemplate DataType="{x:Type vm:MenuViewModel}">
             <local:MenuView/>
         </DataTemplate>
-        <DataTemplate DataType="{x:Type vm:CartViewModel}">
-            <local:CartView/>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type vm:PaymentViewModel}">
-            <local:PaymentView/>
-        </DataTemplate>
-        <DataTemplate DataType="{x:Type vm:MenuOptionViewModel}">
-            <local:MenuOptionView/>
-        </DataTemplate>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -59,11 +50,13 @@
 
             <!--Cart View-->
             <local:CartView Grid.Column="0"
-                            Margin="10"/>
+                            Margin="10"
+                            DataContext="{Binding _cartViewModel}"/>
 
             <!--Payment View-->
             <local:PaymentView Grid.Column="1"
-                               Margin="10"/>
+                               Margin="10"
+                               DataContext="{Binding _paymentViewModel}"/>
         </Grid>
     </Grid>
 </Window>

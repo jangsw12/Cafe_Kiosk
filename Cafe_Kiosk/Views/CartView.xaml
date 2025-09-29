@@ -7,9 +7,19 @@
              mc:Ignorable="d" 
              d:DesignHeight="1280" d:DesignWidth="720">
     <Grid Background="LightGreen">
-        <TextBlock Text="Cart View"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="35"/>
+        <ListView ItemsSource="{Binding CartItems}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="5">
+                        <Image Source="{Binding ImageUri}" Width="60" Height="60"/>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Name}"/>
+                            <TextBlock Text="{Binding Price, StringFormat={}{0:N0}원}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </UserControl>

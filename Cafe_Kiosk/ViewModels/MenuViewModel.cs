@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
-using Cafe_Kiosk.Stores;
 using System.IO;
 using Cafe_Kiosk.ViewModels;
 using System.Windows;

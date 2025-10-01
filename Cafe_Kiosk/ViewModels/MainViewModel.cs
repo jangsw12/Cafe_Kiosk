@@ -1,5 +1,4 @@
 ﻿using Cafe_Kiosk.Services;
-using Cafe_Kiosk.Stores;
 using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;

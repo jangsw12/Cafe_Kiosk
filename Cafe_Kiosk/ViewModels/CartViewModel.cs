@@ -1,6 +1,5 @@
 ﻿using Cafe_Kiosk.Models;
 using Cafe_Kiosk.Services.Cart;
-using Cafe_Kiosk.Stores;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

@@ -8,11 +8,6 @@
         mc:Ignorable="d"
         Height="1280" Width="720"
         Background="LightBlue">
-    <Window.Resources>
-        <DataTemplate DataType="{x:Type vm:MenuViewModel}">
-            <local:MenuView/>
-        </DataTemplate>
-    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
@@ -29,26 +24,13 @@
                    FontSize="20"/>
 
         <!--Menu View-->
-        <ContentControl Grid.Row="1"
+        <local:MenuView Grid.Row="1"
                         Margin="10"
-                        Content="{Binding CurrentViewModel}"/>
-        
-        <Grid Grid.Row="2"
-              Margin="10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="*"/> 
-            </Grid.ColumnDefinitions>
+                        DataContext="{Binding _menuViewModel}"/>
 
-            <!--Cart View-->
-            <local:CartView Grid.Column="0"
-                            Margin="10"
-                            DataContext="{Binding _cartViewModel}"/>
-
-            <!--Payment View-->
-            <local:PaymentView Grid.Column="1"
-                               Margin="10"
-                               DataContext="{Binding _paymentViewModel}"/>
-        </Grid>
+        <!--Cart View-->
+        <local:CartView Grid.Row="2"
+                        Margin="10"
+                        DataContext="{Binding _cartViewModel}"/>
     </Grid>
 </Window>

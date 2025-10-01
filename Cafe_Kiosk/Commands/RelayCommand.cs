@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Cafe_Kiosk
+namespace Cafe_Kiosk.Commands
 {
     public class RelayCommand<T> : ICommand
     {

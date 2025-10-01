@@ -34,9 +34,6 @@ namespace Cafe_Kiosk.Services
                 case NaviType.CartView:
                     CurrentViewModel = (ViewModelBase)App.Current.Services.GetRequiredService(typeof(CartViewModel));
                     break;
-                case NaviType.PaymentView:
-                    CurrentViewModel = (ViewModelBase)App.Current.Services.GetRequiredService(typeof(PaymentViewModel));
-                    break;
                 case NaviType.MenuOptionView:
                     CurrentViewModel = (ViewModelBase)App.Current.Services.GetRequiredService(typeof(MenuOptionViewModel));
                     break;

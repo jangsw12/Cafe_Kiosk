@@ -10,7 +10,6 @@ namespace Cafe_Kiosk.Services
     {
         MenuView,
         CartView,
-        PaymentView,
         MenuOptionView,
     }
 }

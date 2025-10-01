@@ -43,7 +43,6 @@ namespace Cafe_Kiosk
             services.AddSingleton<MainViewModel>();
             services.AddSingleton<MenuViewModel>();
             services.AddSingleton<CartViewModel>();
-            services.AddSingleton<PaymentViewModel>();
             services.AddSingleton<MenuOptionViewModel>();
 
             // Views

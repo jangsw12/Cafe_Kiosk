@@ -14,16 +14,17 @@ namespace Cafe_Kiosk.ViewModels
 {
     public class MenuOptionViewModel : ViewModelBase
     {
-        // Fields
+        // Properties
         private readonly CafeMenuItem _selectedItem;
         private readonly IDialogService _dialogService;
         private readonly ICartService _cartService;
+        public Uri ImageUri => _selectedItem.ImageUri;
 
         // Commands
         public ICommand AddMenuCommand { get; set; }
         public ICommand CancelMenuCommand { get; set; }
 
-        // Methods
+        // Constructor
         public MenuOptionViewModel(CafeMenuItem selectedItem, IDialogService dialogService, ICartService cartService)
         {
             _selectedItem = selectedItem;
@@ -34,8 +35,7 @@ namespace Cafe_Kiosk.ViewModels
             CancelMenuCommand = new RelayCommand<object>(CancelMenu);
         }
 
-        public Uri ImageUri => _selectedItem.ImageUri;
-
+        // Methods
         public void OpenView()
         {
             var view = new MenuOptionView

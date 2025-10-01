@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 namespace Cafe_Kiosk.Models
@@ -36,6 +37,17 @@ namespace Cafe_Kiosk.Models
             }
         }
 
+        private string _category;
+
+        public string Category
+        {
+            get { return _category; }
+            set { 
+                _category = value;
+                OnPropertyChanged();
+            }
+        }
+
         private string _image;
 
         public string Image
@@ -48,7 +60,7 @@ namespace Cafe_Kiosk.Models
             }
         }
 
-        public Uri ImageUri 
+        public Uri ImageUri
         {
             get
             {

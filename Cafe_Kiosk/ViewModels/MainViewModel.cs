@@ -35,20 +35,21 @@ namespace Cafe_Kiosk.ViewModels
             }
         }
 
-        // Methods
+        // Constructor
         public MainViewModel(MainNavigationStore mainNavigationStore, INavigationService navigationService, 
                              CartViewModel cartViewModel, PaymentViewModel paymentViewModel)
         {
             _mainNavigationStore = mainNavigationStore;
             _navigationService = navigationService;
+
             _cartViewModel = cartViewModel;
             _paymentViewModel = paymentViewModel;
 
             _mainNavigationStore.CurrentViewModelChanged += CurrentViewModelChanged;
-
             _navigationService.Navigate(NaviType.MenuView);
         }
 
+        // Methods
         private void CurrentViewModelChanged()
         {
             CurrentViewModel = _mainNavigationStore.CurrentViewModel;

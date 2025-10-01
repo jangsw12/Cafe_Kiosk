@@ -14,12 +14,12 @@ namespace Cafe_Kiosk.ViewModels
 {
     public class CartViewModel : ViewModelBase
     {
-		// Fields
+		// Properties
         private readonly ICartService _cartService;
 
 		public ObservableCollection<CafeMenuItem> CartItems => _cartService.GetItems();
 
-		// Methods
+		// Constructor
         public CartViewModel(ICartService cartService)
         {
             _cartService = cartService;

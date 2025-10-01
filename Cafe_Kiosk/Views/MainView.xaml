@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Cafe_Kiosk.Views"
         xmlns:vm="clr-namespace:Cafe_Kiosk.ViewModels"
         mc:Ignorable="d"
-        Title="MainView" Height="1280" Width="720">
+        Height="1280" Width="720"
+        Background="LightBlue">
     <Window.Resources>
         <DataTemplate DataType="{x:Type vm:MenuViewModel}">
             <local:MenuView/>
@@ -15,7 +16,6 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
-            <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="200"/>
         </Grid.RowDefinitions>
@@ -28,20 +28,12 @@
                    FontWeight="Bold"
                    FontSize="20"/>
 
-        <!--Button-->
-        <Grid Grid.Row="1">
-            <TextBlock Text="버튼들... 클릭으로 화면 전환"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="30"/>
-        </Grid>
-        
         <!--Menu View-->
-        <ContentControl Grid.Row="2"
+        <ContentControl Grid.Row="1"
                         Margin="10"
                         Content="{Binding CurrentViewModel}"/>
         
-        <Grid Grid.Row="3"
+        <Grid Grid.Row="2"
               Margin="10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>

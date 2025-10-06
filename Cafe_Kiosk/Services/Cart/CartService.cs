@@ -11,14 +11,14 @@ namespace Cafe_Kiosk.Services.Cart
 {
     public class CartService : ICartService
     {
-        private readonly ObservableCollection<CafeMenuItem> _items = new();
+        private readonly ObservableCollection<CartItem> _items = new();
 
-        public void AddItem(CafeMenuItem item)
+        public void AddItem(CartItem item)
         {
             _items.Add(item);
         }
 
-        public ObservableCollection<CafeMenuItem> GetItems()
+        public ObservableCollection<CartItem> GetItems()
         {
             return _items;
         }

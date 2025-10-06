@@ -10,7 +10,7 @@ namespace Cafe_Kiosk.Services.Cart
 {
     public interface ICartService
     {
-        void AddItem(CafeMenuItem item);
-        ObservableCollection<CafeMenuItem> GetItems();
+        void AddItem(CartItem item);
+        ObservableCollection<CartItem> GetItems();
     }
 }

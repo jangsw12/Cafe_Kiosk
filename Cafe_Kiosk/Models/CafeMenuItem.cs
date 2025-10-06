@@ -54,7 +54,7 @@ namespace Cafe_Kiosk.Models
         {
             get { return _image; }
             set
-            {
+            { 
                 _image = value;
                 OnPropertyChanged();
             }

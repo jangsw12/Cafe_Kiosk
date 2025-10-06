@@ -6,32 +6,58 @@
              xmlns:local="clr-namespace:Cafe_Kiosk.Views"
              mc:Ignorable="d" 
              d:DesignHeight="200" d:DesignWidth="720">
-    <Grid Background="LightGreen">
+    <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1.5*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         
+        <!--Cart List-->
         <ListView Grid.Column="0"
                   ItemsSource="{Binding CartItems}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal"
                                 Margin="5">
-                        <Image Source="{Binding ImageUri}" Width="60" Height="60"/>
+                        <Image Source="{Binding MenuItem.ImageUri}" Width="60" Height="60"/>
                         <StackPanel>
-                            <TextBlock Text="{Binding Name}"/>
-                            <TextBlock Text="{Binding Price, StringFormat={}{0:N0}원}"/>
+                            <TextBlock Text="{Binding MenuItem.Name}"/>
+                            <TextBlock Text="{Binding MenuItem.Price, StringFormat={}{0:N0}원}"/>
+                            <TextBlock Text="{Binding Quantity, StringFormat='개수: {0:N0}개'}"/>
+                            <TextBlock Text="{Binding TotalPrice, StringFormat='총 금액: {0:N0}원'}"/>
                         </StackPanel>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
 
-        <TextBlock Grid.Column="1"
-                   Text="결제 기능"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="35"/>
+        <!--Payment Section-->
+        <StackPanel Grid.Column="1"
+                    Margin="5"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Background="White"
+                    Width="300">
+            <!--Total Price-->
+            <TextBlock Text="{Binding TotalCartPrice, StringFormat='총 결제 금액: {0:N0}원'}"
+                       FontSize="18"
+                       FontWeight="Bold"
+                       TextAlignment="Center"
+                       Margin="5"/>
+            
+            <!--Payment Btn-->
+            <Button Content="결제하기"
+                    Width="200"
+                    Height="40"
+                    Margin="5"
+                    Command="{Binding PayCommand}"/>
+            
+            <!--Clear Cart Btn-->
+            <Button Content="전체 취소"
+                    Width="200"
+                    Height="40"
+                    Margin="5"
+                    Command="{Binding ClearCartCommand}"/>
+        </StackPanel>
     </Grid>
 </UserControl>

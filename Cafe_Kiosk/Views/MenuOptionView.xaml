@@ -31,52 +31,52 @@
                 <Image Source="{Binding ImageUri}" Stretch="Uniform" />
             </Border>
 
-            <!-- 사이즈 선택 -->
-            <GroupBox Header="사이즈" Grid.Row="1" Margin="0 0 0 10">
-                <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
-                    <RadioButton Content="Small" GroupName="Size" Margin="10 0"
-                             IsChecked="{Binding SelectedSize, ConverterParameter=Small, Converter={StaticResource EnumToBooleanConverter}}" />
-                    <RadioButton Content="Medium" GroupName="Size" Margin="10 0"
-                             IsChecked="{Binding SelectedSize, ConverterParameter=Medium, Converter={StaticResource EnumToBooleanConverter}}" />
-                    <RadioButton Content="Large" GroupName="Size" Margin="10 0"
-                             IsChecked="{Binding SelectedSize, ConverterParameter=Large, Converter={StaticResource EnumToBooleanConverter}}" />
-                </StackPanel>-->
+            <!--Size-->
+            <GroupBox Grid.Row="1"
+                      Header="사이즈"
+                      Margin="0 0 0 10">
+                
             </GroupBox>
 
-            <!-- 시럽 추가 (1~3 개수) -->
-            <GroupBox Header="시럽 추가" Grid.Row="2" Margin="0 0 0 10">
-                <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
-                    <RadioButton Content="1" GroupName="SyrupCount" Margin="10 0"
-                             IsChecked="{Binding SyrupCount, ConverterParameter=1, Converter={StaticResource IntToBooleanConverter}}" />
-                    <RadioButton Content="2" GroupName="SyrupCount" Margin="10 0"
-                             IsChecked="{Binding SyrupCount, ConverterParameter=2, Converter={StaticResource IntToBooleanConverter}}" />
-                    <RadioButton Content="3" GroupName="SyrupCount" Margin="10 0"
-                             IsChecked="{Binding SyrupCount, ConverterParameter=3, Converter={StaticResource IntToBooleanConverter}}" />
-                </StackPanel>-->
+            <!--Syrup-->
+            <GroupBox Grid.Row="2"
+                      Header="시럽 추가"
+                      Margin="0 0 0 10">
+                
             </GroupBox>
-
-            <!-- 얼음량 조절 -->
-            <GroupBox Header="얼음량" Grid.Row="3" Margin="0 0 0 10">
-                <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
-                    <RadioButton Content="적게" GroupName="IceAmount" Margin="10 0"
-                             IsChecked="{Binding SelectedIceAmount, ConverterParameter=Low, Converter={StaticResource EnumToBooleanConverter}}" />
-                    <RadioButton Content="보통" GroupName="IceAmount" Margin="10 0"
-                             IsChecked="{Binding SelectedIceAmount, ConverterParameter=Normal, Converter={StaticResource EnumToBooleanConverter}}" />
-                    <RadioButton Content="많이" GroupName="IceAmount" Margin="10 0"
-                             IsChecked="{Binding SelectedIceAmount, ConverterParameter=High, Converter={StaticResource EnumToBooleanConverter}}" />
-                </StackPanel>-->
+            
+            <!--Ice Amount-->
+            <GroupBox Grid.Row="3"
+                      Header="얼음량"
+                      Margin="0 0 0 10">
+                
             </GroupBox>
-
-            <!-- 수량 조절 -->
-            <StackPanel Orientation="Horizontal" Grid.Row="4" HorizontalAlignment="Center" Margin="0 10">
-                <!--<Button Content="-" Width="30" Command="{Binding DecreaseQuantityCommand}" />
-                <TextBlock Text="{Binding Quantity}" Width="40" TextAlignment="Center" VerticalAlignment="Center" FontSize="16" Margin="5 0"/>
-                <Button Content="+" Width="30" Command="{Binding IncreaseQuantityCommand}" />-->
+           
+            <!--Quantity-->
+            <StackPanel Grid.Row="4"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Margin="0 10">
+                <Button Content="-"
+                        Width="30"
+                        Command="{Binding DecreaseQuantityCommand}"/>
+                <TextBlock Text="{Binding Quantity}"
+                           Width="40"
+                           TextAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontSize="16"
+                           Margin="5 0"/>
+                <Button Content="+"
+                        Width="30"
+                        Command="{Binding IncreaseQuantityCommand}"/>
             </StackPanel>
-
-            <!-- 총 가격 표시 -->
+            
+            <!--Total Price-->
             <TextBlock Grid.Row="5"
-                       Text="총 가격 등 정보 표시창"/>
+                       TextAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="16"
+                       Text="{Binding TotalPrice, StringFormat='총 금액: {0:N0}원'}"/>
 
             <!--담기 / 취소 버튼-->
             <StackPanel Grid.Row="6"

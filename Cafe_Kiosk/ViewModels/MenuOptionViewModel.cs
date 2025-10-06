@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace Cafe_Kiosk.ViewModels
@@ -21,9 +22,25 @@ namespace Cafe_Kiosk.ViewModels
         private readonly ICartService _cartService;
         public Uri ImageUri => _selectedItem.ImageUri;
 
+        public int TotalPrice => _selectedItem.Price * Quantity;
+
+        private int _quantity;
+
+        public int Quantity
+        {
+            get { return _quantity; }
+            set { 
+                _quantity = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(TotalPrice));
+            }
+        }
+
         // Commands
         public ICommand AddMenuCommand { get; set; }
         public ICommand CancelMenuCommand { get; set; }
+        public ICommand DecreaseQuantityCommand { get; set; }
+        public ICommand IncreaseQuantityCommand { get; set; }
 
         // Constructor
         public MenuOptionViewModel(CafeMenuItem selectedItem, IDialogService dialogService, ICartService cartService)
@@ -32,8 +49,12 @@ namespace Cafe_Kiosk.ViewModels
             _dialogService = dialogService;
             _cartService = cartService;
 
+            _quantity = 1;
+
             AddMenuCommand = new RelayCommand<object>(AddMenu);
             CancelMenuCommand = new RelayCommand<object>(CancelMenu);
+            DecreaseQuantityCommand = new RelayCommand<object>(DecreaseQuantity, CanDecreaseQuantity);
+            IncreaseQuantityCommand = new RelayCommand<object>(IncreaseQuantity);
         }
 
         // Methods
@@ -49,13 +70,30 @@ namespace Cafe_Kiosk.ViewModels
 
         private void AddMenu(object _)
         {
-            _cartService.AddItem(_selectedItem);
+            var carItem = new CartItem(_selectedItem, Quantity);
+            _cartService.AddItem(carItem);
             _dialogService.CloseMenuOptionDialog();
         }
 
         private void CancelMenu(object _)
         {
             _dialogService.CloseMenuOptionDialog();
+        }
+
+        private void DecreaseQuantity(object _)
+        {
+            if (Quantity > 1)
+                Quantity--;
+        }
+
+        private bool CanDecreaseQuantity(object _)
+        {
+            return Quantity > 1;
+        }
+
+        private void IncreaseQuantity(object _)
+        {
+            Quantity++;
         }
     }
 }

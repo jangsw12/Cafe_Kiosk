@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Cafe_Kiosk.Views"
              mc:Ignorable="d" 
              d:DesignHeight="200" d:DesignWidth="720">
-    <Grid>
+    <Grid Margin="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1.5*"/>
             <ColumnDefinition Width="*"/>
@@ -14,6 +14,9 @@
         
         <!--Cart List-->
         <ListView Grid.Column="0"
+                  ScrollViewer.CanContentScroll="False"
+                  VirtualizingStackPanel.IsVirtualizing="True"
+                  VirtualizingStackPanel.VirtualizationMode="Recycling"
                   ItemsSource="{Binding CartItems}">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -32,32 +35,36 @@
         </ListView>
 
         <!--Payment Section-->
-        <StackPanel Grid.Column="1"
-                    Margin="5"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center"
-                    Background="White"
-                    Width="300">
+        <Grid Grid.Column="1"
+              Background="White"
+              Margin="3">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
             <!--Total Price-->
-            <TextBlock Text="{Binding TotalCartPrice, StringFormat='총 결제 금액: {0:N0}원'}"
+            <TextBlock Grid.Row="0"
+                       Text="{Binding TotalCartPrice, StringFormat='총 결제 금액: {0:N0}원'}"
                        FontSize="18"
                        FontWeight="Bold"
                        TextAlignment="Center"
-                       Margin="5"/>
-            
+                       Margin="5 10 5 5"/>
+
             <!--Payment Btn-->
-            <Button Content="결제하기"
+            <Button Grid.Row="1"
+                    Content="결제하기"
                     Width="200"
-                    Height="40"
                     Margin="5"
                     Command="{Binding PayCommand}"/>
-            
+
             <!--Clear Cart Btn-->
-            <Button Content="전체 취소"
+            <Button Grid.Row="2"
+                    Content="전체 취소"
                     Width="200"
-                    Height="40"
                     Margin="5"
                     Command="{Binding ClearCartCommand}"/>
-        </StackPanel>
+        </Grid>
     </Grid>
 </UserControl>

@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cafe_Kiosk.Views"
         mc:Ignorable="d"
-        Height="960" Width="540"
+        Height="1000" Width="720"
         WindowStyle="None"
         AllowsTransparency="True"
         Background="Transparent">
-    <Border Background="White"
+    <Border Margin="10"
+            Background="White"
             CornerRadius="15"
             BorderThickness="1"
             BorderBrush="Gray">

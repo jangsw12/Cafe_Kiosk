@@ -45,5 +45,19 @@ namespace Cafe_Kiosk.Services.Dialog
             _window?.Close();
             _window = null;
         }
+
+        public bool ShowConfirmation(string message, string title)
+        {
+            var dialog = new ConfirmDialog(message)
+            {
+                Title = title,
+                Owner = Application.Current.MainWindow,
+                WindowStartupLocation = WindowStartupLocation.Manual
+            };
+
+            dialog.ShowDialog();
+
+            return dialog.Result;
+        }
     }
 }

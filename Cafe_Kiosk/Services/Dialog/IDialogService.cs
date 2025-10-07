@@ -11,5 +11,6 @@ namespace Cafe_Kiosk.Services.Dialog
     {
         void ShowMenuOptionDialog(CafeMenuItem menuItem);
         void CloseMenuOptionDialog();
+        bool ShowConfirmation(string message, string title);
     }
 }

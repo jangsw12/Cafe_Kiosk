@@ -5,7 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cafe_Kiosk.Views"
         mc:Ignorable="d"
-        Title="MenuOptionView" 
         Height="960" Width="540"
         WindowStyle="None"
         AllowsTransparency="True"

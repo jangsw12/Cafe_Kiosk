@@ -18,18 +18,69 @@
                   VirtualizingStackPanel.IsVirtualizing="True"
                   VirtualizingStackPanel.VirtualizationMode="Recycling"
                   ItemsSource="{Binding CartItems}">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Horizontal"
-                                Margin="5">
-                        <Image Source="{Binding MenuItem.ImageUri}" Width="60" Height="60"/>
-                        <StackPanel>
-                            <TextBlock Text="{Binding MenuItem.Name}"/>
-                            <TextBlock Text="{Binding MenuItem.Price, StringFormat={}{0:N0}원}"/>
-                            <TextBlock Text="{Binding Quantity, StringFormat='개수: {0:N0}개'}"/>
-                            <TextBlock Text="{Binding TotalPrice, StringFormat='총 금액: {0:N0}원'}"/>
+                    <Grid Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <!--Image-->
+                        <Image Grid.Column="0"
+                               Source="{Binding MenuItem.ImageUri}"
+                               Width="60" Height="60"/>
+                        
+                        <!--Text & Option-->
+                        <StackPanel Grid.Column="1"
+                                    Margin="10 0">
+                            <!--Text-->
+                            <TextBlock Text="{Binding MenuItem.Name}"
+                                       FontWeight="Bold"
+                                       FontSize="14"/>
+                            <TextBlock Text="{Binding MenuItem.Price, StringFormat={}{0:N0}원}"
+                                       FontSize="12"
+                                       Foreground="Gray"/>
+                            <TextBlock Text="{Binding Quantity, StringFormat='개수: {0:N0}개'}"
+                                       FontSize="12"/>
+                            
+                            <!--Option-->
+                            <TextBlock Text="{Binding SelectedCoffeeSize, StringFormat='사이즈: {0}'}"
+                                       FontSize="12"/>
+                            <TextBlock Text="{Binding SelectedIceAmount, StringFormat='얼음량: {0}'}"
+                                       FontSize="12"/>
+                            <TextBlock Text="{Binding SyrupSummary}"
+                                       FontSize="12"
+                                       TextWrapping="Wrap"/>
+                            
+                            <TextBlock Text="{Binding TotalPrice, StringFormat='총 금액: {0:N0}원'}"
+                                       FontWeight="Bold"
+                                       FontSize="13"
+                                       Margin="0 3 0 0"/>
                         </StackPanel>
-                    </StackPanel>
+                        
+                        <!--Buttons-->
+                        <StackPanel Grid.Column="2"
+                                    Orientation="Horizontal"
+                                    VerticalAlignment="Center"
+                                    Margin="5 0">
+                            <Button Content="-"
+                                    Width="30"
+                                    Command="{Binding DecreaseQuantityCommand}"/>
+                            <Button Content="+"
+                                    Width="30"
+                                    Command="{Binding IncreaseQuantityCommand}"/>
+                            <Button Content="삭제"
+                                    Width="30"
+                                    Command="{Binding RemoveItemCommand}"/>
+                        </StackPanel>
+                    </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

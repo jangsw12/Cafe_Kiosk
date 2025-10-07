@@ -18,20 +18,27 @@ namespace Cafe_Kiosk.Commands
             _canExecute = canExecute;
         }
 
-        public event EventHandler? CanExecuteChanged
-        {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
-        }
+        public event EventHandler? CanExecuteChanged;
 
         public bool CanExecute(object? parameter)
         {
-            return _canExecute?.Invoke((T)parameter!) ?? true;
+            if (_canExecute == null)
+                return true;
+
+            if (parameter == null && typeof(T).IsValueType)
+                return false;
+
+            return _canExecute((T)parameter!);
         }
 
         public void Execute(object? parameter)
         {
-            _execute?.Invoke((T)parameter!);
+            _execute((T)parameter!);
+        }
+
+        public void RaiseCanExecuteChanged()
+        {
+            CanExecuteChanged?.Invoke(this, EventArgs.Empty);
         }
     }
 }

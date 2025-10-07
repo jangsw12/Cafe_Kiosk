@@ -14,7 +14,7 @@ using System.Windows;
 using Cafe_Kiosk.Views;
 using Cafe_Kiosk.Services.MenuData;
 using Cafe_Kiosk.Services.Dialog;
-using CommunityToolkit.Mvvm.Input;
+using Cafe_Kiosk.Commands;
 
 namespace Cafe_Kiosk.ViewModels
 {

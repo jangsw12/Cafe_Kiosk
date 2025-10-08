@@ -44,6 +44,37 @@ namespace Cafe_Kiosk.Models
             }
         }
 
+        private ShotCount _selectedShotCount;
+
+        public ShotCount SelectedShotCount
+        {
+            get { return _selectedShotCount; }
+            set
+            {
+                if (_selectedShotCount != value)
+                {
+                    _selectedShotCount = value;
+                    OnPropertyChanged();
+                    OnPropertyChanged(nameof(TotalPrice));
+                }
+            }
+        }
+
+        private Temperature _selectedTemperature;
+
+        public Temperature SelectedTemperature
+        {
+            get { return _selectedTemperature; }
+            set
+            {
+                if (_selectedTemperature != value)
+                {
+                    _selectedTemperature = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
         private IceAmount _selectedIceAmount;
 
         public IceAmount SelectedIceAmount
@@ -57,9 +88,6 @@ namespace Cafe_Kiosk.Models
                 }
             }
         }
-
-        // Syrup Property
-        // .... 작성 예정
 
         public int TotalPrice
         {
@@ -76,13 +104,55 @@ namespace Cafe_Kiosk.Models
                     _ => 0
                 };
 
-                // Syrup
-                // .... 작성 예정
+                // Shot
+                int shotExtra = SelectedShotCount switch
+                {
+                    ShotCount.Zero => 0,
+                    ShotCount.One => 500,
+                    ShotCount.Two => 1000,
+                    _ => 0
+                };
 
-
-                return (basePrice + sizeExtra/* + Syrup*/) * Quantity;
+                return (basePrice + sizeExtra + shotExtra) * Quantity;
             }
         }
+
+        // Display Properties
+        public string DisplayCoffeeSize =>
+            SelectedCoffeeSize switch
+            {
+                CoffeeSize.Small => "스몰",
+                CoffeeSize.Tall => "톨",
+                CoffeeSize.Large => "라지",
+                _ => ""
+            };
+
+        public string DisplayShotCount =>
+            SelectedShotCount switch
+            {
+                ShotCount.Zero => "샷 추가 없음",
+                ShotCount.One => "1샷 추가",
+                ShotCount.Two => "2샷 추가",
+                _ => ""
+            };
+
+        public string DisplayTemperature =>
+            SelectedTemperature switch
+            {
+                Temperature.Ice => "아이스",
+                Temperature.Hot => "뜨겁게",
+                _ => ""
+            };
+
+        public string DisplayIceAmount =>
+            SelectedIceAmount switch
+            {
+                IceAmount.None => "얼음 없음",
+                IceAmount.Less => "얼음 적게",
+                IceAmount.Regular => "얼음 보통",
+                IceAmount.More => "얼음 많이",
+                _ => ""
+            };
 
         // Constructor
         public CartItem(CafeMenuItem menuItem, int quantity)
@@ -93,7 +163,8 @@ namespace Cafe_Kiosk.Models
             // Initally Default Value
             SelectedCoffeeSize = CoffeeSize.Small;
             SelectedIceAmount = IceAmount.Regular;
-            // Syrup 초기값 설정
+            SelectedShotCount = ShotCount.One;
+            SelectedTemperature = Temperature.Ice;
         }
     }
 }

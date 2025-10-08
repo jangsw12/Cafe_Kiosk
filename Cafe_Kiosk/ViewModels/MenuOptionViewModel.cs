@@ -37,7 +37,15 @@ namespace Cafe_Kiosk.ViewModels
                     _ => 0
                 };
 
-                return (basePrice + sizeExtra) * Quantity;
+                int shotExtra = SelectedShotCount switch
+                {
+                    ShotCount.Zero => 0,
+                    ShotCount.One => 500,
+                    ShotCount.Two => 1000,
+                    _ => 0
+                };
+
+                return (basePrice + sizeExtra + shotExtra) * Quantity;
             }
         }
 
@@ -67,6 +75,38 @@ namespace Cafe_Kiosk.ViewModels
                 if (_selectedCoffeeSize != value)
                 {
                     _selectedCoffeeSize = value;
+                    OnPropertyChanged();
+                    OnPropertyChanged(nameof(TotalPrice));
+                }
+            }
+        }
+
+        private ShotCount _selectedShotCount = ShotCount.Zero;
+
+        public ShotCount SelectedShotCount
+        {
+            get { return _selectedShotCount; }
+            set
+            {
+                if (_selectedShotCount != value)
+                {
+                    _selectedShotCount = value;
+                    OnPropertyChanged();
+                    OnPropertyChanged(nameof(TotalPrice));
+                }
+            }
+        }
+
+        private Temperature _selectedTemperature = Temperature.Ice;
+
+        public Temperature SelectedTemperature
+        {
+            get { return _selectedTemperature; }
+            set
+            {
+                if (_selectedTemperature != value)
+                {
+                    _selectedTemperature = value;
                     OnPropertyChanged();
                     OnPropertyChanged(nameof(TotalPrice));
                 }
@@ -125,6 +165,8 @@ namespace Cafe_Kiosk.ViewModels
             var carItem = new CartItem(_selectedItem, Quantity)
             {
                 SelectedCoffeeSize = this.SelectedCoffeeSize,
+                SelectedShotCount = this.SelectedShotCount,
+                SelectedTemperature = this.SelectedTemperature,
                 SelectedIceAmount = this.SelectedIceAmount
             };
 

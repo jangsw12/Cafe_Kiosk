@@ -3,9 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Cafe_Kiosk.Views" xmlns:fa6="http://schemas.fontawesome.com/icons/svg"
+             xmlns:local="clr-namespace:Cafe_Kiosk.Views" 
+             xmlns:fa6="http://schemas.fontawesome.com/icons/svg"
              mc:Ignorable="d" 
-             d:DesignHeight="1000" d:DesignWidth="720">
+             d:DesignHeight="1000" d:DesignWidth="720"
+             Background="#6F4E37">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -28,12 +30,16 @@
                     Margin="10 0"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center">
-                <TextBlock Text="{Binding CurrentCategory}"
-                           FontSize="20"
-                           FontWeight="Bold"
-                           TextAlignment="Center"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center">
+                    <fa6:SvgAwesome Icon="{Binding CurrentIcon}"
+                                    Width="30" Height="30"
+                                    Margin="0 0 5 0"/>
+                    <TextBlock Text="{Binding CurrentCategory}"
+                               FontSize="30"
+                               FontWeight="Bold"/>
+                </StackPanel>
             </Border>
 
             <Button Width="50" Height="40"
@@ -45,7 +51,8 @@
         <!--Menu List-->
         <ScrollViewer Grid.Row="1"
                       VerticalScrollBarVisibility="Auto">
-            <ItemsControl ItemsSource="{Binding FilteredMenuItems}">
+            <ItemsControl ItemsSource="{Binding FilteredMenuItems}"
+                          VerticalAlignment="Top">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <UniformGrid Columns="4"/>
@@ -59,6 +66,7 @@
                                 Background="White"
                                 BorderBrush="LightGray"
                                 BorderThickness="1"
+                                Height="200"
                                 Margin="5"
                                 Padding="10">
                             <StackPanel>

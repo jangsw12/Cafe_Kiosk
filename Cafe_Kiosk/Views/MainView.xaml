@@ -4,10 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cafe_Kiosk.Views"
-        xmlns:vm="clr-namespace:Cafe_Kiosk.ViewModels"
+        xmlns:vm="clr-namespace:Cafe_Kiosk.ViewModels" 
+        xmlns:fa6="http://schemas.fontawesome.com/icons/svg"
         mc:Ignorable="d"
         Height="1280" Width="720"
-        Background="LightBlue">
+        Background="#F5F1E9">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
@@ -16,12 +17,20 @@
         </Grid.RowDefinitions>
 
         <!--Logo-->
-        <TextBlock Grid.Row="0"
-                   Text="Cafe Kiosk Program"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   FontWeight="Bold"
-                   FontSize="20"/>
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Margin="10">
+            <fa6:SvgAwesome Icon="Solid_Store"
+                            Margin="5 0"
+                            Width="50" Height="50"/>
+            <TextBlock Text="Cafe Kiosk Program"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontWeight="Bold"
+                       FontSize="25"/>
+        </StackPanel>
 
         <!--Menu View-->
         <local:MenuView Grid.Row="1"

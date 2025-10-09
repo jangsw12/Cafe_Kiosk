@@ -15,6 +15,7 @@ using Cafe_Kiosk.Views;
 using Cafe_Kiosk.Services.MenuData;
 using Cafe_Kiosk.Services.Dialog;
 using Cafe_Kiosk.Commands;
+using FontAwesome6.Svg;
 
 namespace Cafe_Kiosk.ViewModels
 {
@@ -27,6 +28,15 @@ namespace Cafe_Kiosk.ViewModels
         private List<CafeMenuItem> _allMenuItems;
 
         private readonly List<string> _categories = new() { "All", "Coffee", "Latte", "Tea" };
+        public string CurrentIcon => CurrentCategory switch
+        {
+            "All" => "Solid_GripLines",
+            "Coffee" => "Solid_MugSaucer",
+            "Latte" => "Solid_MugHot",
+            "Tea" => "Solid_Leaf",
+            _ => string.Empty
+        };
+
         private int _currentCategoryIndex = 0;
 
         public string CurrentCategory => _categories[_currentCategoryIndex];
@@ -70,6 +80,7 @@ namespace Cafe_Kiosk.ViewModels
                 FilteredMenuItems.Add(item);
 
             OnPropertyChanged(nameof(CurrentCategory));
+            OnPropertyChanged(nameof(CurrentIcon));
         }
 
         private void NextCategory(object _)

@@ -16,7 +16,7 @@
     </Window.Resources>
     
     <Border Margin="10"
-            Background="White"
+            Background="#E6DED0"
             CornerRadius="15"
             BorderThickness="1"
             BorderBrush="Gray">

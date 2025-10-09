@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:Cafe_Kiosk.Views"
              mc:Ignorable="d" 
              d:DesignHeight="200" d:DesignWidth="720">
-    <Grid Margin="10">
+    <Grid Margin="10"
+          Background="#F5F1E9">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1.5*"/>
             <ColumnDefinition Width="*"/>
@@ -14,6 +15,7 @@
         
         <!--Cart List-->
         <ListView Grid.Column="0"
+                  Background="#D2B48C"
                   ScrollViewer.CanContentScroll="False"
                   VirtualizingStackPanel.IsVirtualizing="True"
                   VirtualizingStackPanel.VirtualizationMode="Recycling"
@@ -109,7 +111,7 @@
 
         <!--Payment Section-->
         <Grid Grid.Column="1"
-              Background="White"
+              Background="#A3B18A"
               HorizontalAlignment="Stretch"
               VerticalAlignment="Stretch"
               Margin="3">

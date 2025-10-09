@@ -109,6 +109,8 @@ namespace Cafe_Kiosk.ViewModels
                     _selectedTemperature = value;
                     OnPropertyChanged();
                     OnPropertyChanged(nameof(TotalPrice));
+
+                    IsIceAmountEnabled = (_selectedTemperature == Temperature.Ice);
                 }
             }
         }
@@ -128,6 +130,20 @@ namespace Cafe_Kiosk.ViewModels
             }
         }
 
+        private bool _isIceAmountEnabled;
+
+        public bool IsIceAmountEnabled
+        {
+            get { return _isIceAmountEnabled; }
+            set { 
+                if (_isIceAmountEnabled != value)
+                {
+                    _isIceAmountEnabled = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
         // Commands
         public ICommand AddMenuCommand { get; set; }
         public ICommand CancelMenuCommand { get; set; }
@@ -142,6 +158,7 @@ namespace Cafe_Kiosk.ViewModels
             _cartService = cartService;
 
             _quantity = 1;
+            IsIceAmountEnabled = (_selectedTemperature == Temperature.Ice);
 
             AddMenuCommand = new RelayCommand<object>(AddMenu);
             CancelMenuCommand = new RelayCommand<object>(CancelMenu);

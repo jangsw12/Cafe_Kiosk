@@ -64,10 +64,7 @@
                             <TextBlock Text="{Binding DisplayShotCount}"
                                        FontSize="12"
                                        Margin="0 1"/>
-                            <TextBlock Text="{Binding DisplayTemperature}"
-                                       FontFamily="12"
-                                       Margin="0 1"/>
-                            <TextBlock Text="{Binding DisplayIceAmount}"
+                            <TextBlock Text="{Binding DisplayTemperatureWithIce}"
                                        FontSize="12"
                                        Margin="0 1"/>
                         </StackPanel>

@@ -124,7 +124,7 @@ namespace Cafe_Kiosk.Models
                 CoffeeSize.Small => "스몰",
                 CoffeeSize.Tall => "톨",
                 CoffeeSize.Large => "라지",
-                _ => ""
+                _ => string.Empty
             };
 
         public string DisplayShotCount =>
@@ -133,26 +133,61 @@ namespace Cafe_Kiosk.Models
                 ShotCount.Zero => "샷 추가 없음",
                 ShotCount.One => "1샷 추가",
                 ShotCount.Two => "2샷 추가",
-                _ => ""
+                _ => string.Empty
             };
 
-        public string DisplayTemperature =>
-            SelectedTemperature switch
-            {
-                Temperature.Ice => "아이스",
-                Temperature.Hot => "뜨겁게",
-                _ => ""
-            };
+        //public string DisplayTemperature =>
+        //    SelectedTemperature switch
+        //    {
+        //        Temperature.Ice => "아이스",
+        //        Temperature.Hot => "뜨겁게",
+        //        _ => string.Empty
+        //    };
 
-        public string DisplayIceAmount =>
-            SelectedIceAmount switch
+        //public string DisplayIceAmount
+        //{
+        //    get
+        //    {
+        //        if (SelectedTemperature == Temperature.Hot)
+        //            return string.Empty;
+
+        //        return SelectedIceAmount switch
+        //        {
+        //            IceAmount.None => "얼음 없음",
+        //            IceAmount.Less => "얼음 적게",
+        //            IceAmount.Regular => "얼음 보통",
+        //            IceAmount.More => "얼음 많이",
+        //            _ => string.Empty
+        //        };
+        //    }
+        //}
+
+        public string DisplayTemperatureWithIce
+        {
+            get
             {
-                IceAmount.None => "얼음 없음",
-                IceAmount.Less => "얼음 적게",
-                IceAmount.Regular => "얼음 보통",
-                IceAmount.More => "얼음 많이",
-                _ => ""
-            };
+                var tempText = SelectedTemperature switch
+                {
+                    Temperature.Ice => "아이스",
+                    Temperature.Hot => "뜨겁게",
+                    _ => string.Empty
+                };
+
+                if (SelectedTemperature == Temperature.Hot)
+                    return tempText;
+
+                var iceText = SelectedIceAmount switch
+                {
+                    IceAmount.None => "얼음 없음",
+                    IceAmount.Less => "얼음 적게",
+                    IceAmount.Regular => "얼음 보통",
+                    IceAmount.More => "얼음 많이",
+                    _ => string.Empty
+                };
+
+                return $"{tempText} ({iceText})";
+            }
+        }
 
         // Constructor
         public CartItem(CafeMenuItem menuItem, int quantity)

@@ -150,7 +150,8 @@
             <!--Ice Amount-->
             <GroupBox Grid.Row="4"
                       Header="얼음량 (가격 변동 없음)"
-                      Margin="0 0 0 10">
+                      Margin="0 0 0 10"
+                      IsEnabled="{Binding IsIceAmountEnabled}">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>

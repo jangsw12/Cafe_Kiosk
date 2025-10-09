@@ -27,6 +27,9 @@ namespace Cafe_Kiosk.ViewModels
         // Commands
         public ICommand PayCommand { get; set; }
         public ICommand ClearCartCommand { get; set; }
+        public ICommand DecreaseQuantityCommand { get; set; }
+        public ICommand IncreaseQuantityCommand { get; set; }
+        public ICommand RemoveItemCommand { get; set; }
 
         // Constructor
         public CartViewModel(ICartService cartService, IDialogService dialogService)
@@ -36,6 +39,9 @@ namespace Cafe_Kiosk.ViewModels
 
             PayCommand = new RelayCommand<object>(Pay, CanPay);
             ClearCartCommand = new RelayCommand<object>(ClearCart, CanClearCart);
+            DecreaseQuantityCommand = new RelayCommand<object>(DecreaseQuantity);
+            IncreaseQuantityCommand = new RelayCommand<object>(IncreaseQuantity);
+            RemoveItemCommand = new RelayCommand<object>(RemoveItem);
 
             CartItems.CollectionChanged += (_, __) =>
             {
@@ -101,6 +107,30 @@ namespace Cafe_Kiosk.ViewModels
         private bool CanClearCart(object _)
         {
             return CartItems.Any();
+        }
+
+        private void DecreaseQuantity(object parameter)
+        {
+            if (parameter is CartItem item && item.Quantity > 1)
+            {
+                item.Quantity--;
+            }
+        }
+
+        private void IncreaseQuantity(object parameter)
+        {
+            if (parameter is CartItem item)
+            {
+                item.Quantity++;
+            }
+        }
+
+        private void RemoveItem(object parameter)
+        {
+            if (parameter is CartItem item)
+            {
+                CartItems.Remove(item);
+            }
         }
     }
 }

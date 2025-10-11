@@ -2,6 +2,9 @@
 using Cafe_Kiosk.Models;
 using Cafe_Kiosk.Services.Cart;
 using Cafe_Kiosk.Services.Dialog;
+using Cafe_Kiosk.ViewModels.Payment;
+using Cafe_Kiosk.Views.Payment;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -77,15 +80,7 @@ namespace Cafe_Kiosk.ViewModels
 
         private void Pay(object _)
         {
-            if (CartItems.Count > 0)
-            {
-                if (_dialogService.ShowConfirmation("결제를 진행하시겠습니까?","결제 확인"))
-                {
-                    // 결제 처리 로직
-                    MessageBox.Show("결제가 완료되었습니다", "결제 완료", MessageBoxButton.OK, MessageBoxImage.Information);
-                    CartItems.Clear();
-                }
-            }
+            _dialogService.ShowPaymentDialog();
         }
 
         private bool CanPay(object _)

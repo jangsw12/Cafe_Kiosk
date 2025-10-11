@@ -1,0 +1,42 @@
+﻿<Window x:Class="Cafe_Kiosk.Views.Payment.PaymentView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cafe_Kiosk.Views.Payment"
+        xmlns:vm="clr-namespace:Cafe_Kiosk.ViewModels.Payment"
+        mc:Ignorable="d"
+        Height="1000" Width="720"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent">
+
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type vm:PaymentStartViewModel}">
+            <local:PaymentStartView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:PaymentMethodViewModel}">
+            <local:PaymentMethodView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:PaymentProcessingViewModel}">
+            <local:PaymentProcessingView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:PaymentWaitingViewModel}">
+            <local:PaymentWaitingView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:PaymentResultViewModel}">
+            <local:PaymentResultView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:ReceiptOptionViewModel}">
+            <local:ReceiptOptionView/>
+        </DataTemplate>
+    </Window.Resources>
+   
+    <Border Background="#E6DED0"
+            CornerRadius="15"
+            BorderThickness="1"
+            BorderBrush="Gray">
+        <ContentControl Margin="10"
+                        Content="{Binding CurrentViewModel}"/>
+    </Border>
+</Window>

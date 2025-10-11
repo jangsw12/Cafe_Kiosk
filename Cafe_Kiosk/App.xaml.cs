@@ -2,8 +2,12 @@
 using Cafe_Kiosk.Services.Cart;
 using Cafe_Kiosk.Services.Dialog;
 using Cafe_Kiosk.Services.MenuData;
+using Cafe_Kiosk.Services.Navi;
+using Cafe_Kiosk.Stores;
 using Cafe_Kiosk.ViewModels;
+using Cafe_Kiosk.ViewModels.Payment;
 using Cafe_Kiosk.Views;
+using Cafe_Kiosk.Views.Payment;
 using Microsoft.Extensions.DependencyInjection;
 using System.Configuration;
 using System.Data;
@@ -29,21 +33,40 @@ namespace Cafe_Kiosk
         {
             var services = new ServiceCollection();
 
+            // Stores
+            services.AddSingleton<PaymentNavigationStore>();
+
             // Services
             services.AddSingleton<IMenuDataService, MenuDataService>();
             services.AddSingleton<IDialogService, DialogService>();
             services.AddSingleton<ICartService, CartService>();
+            services.AddSingleton<INavigationService, NavigationService>();
 
             // ViewModels
             services.AddSingleton<MainViewModel>();
             services.AddSingleton<MenuViewModel>();
             services.AddSingleton<CartViewModel>();
             services.AddSingleton<MenuOptionViewModel>();
+            services.AddSingleton<PaymentViewModel>();
+            services.AddTransient<PaymentStartViewModel>();
+            services.AddTransient<PaymentMethodViewModel>();
+            services.AddTransient<PaymentProcessingViewModel>();
+            services.AddTransient<PaymentWaitingViewModel>();
+            services.AddTransient<PaymentResultViewModel>();
+            services.AddTransient<ReceiptOptionViewModel>();
 
             // Views
             services.AddSingleton(s => new MainView()
             {
                 DataContext = s.GetRequiredService<MainViewModel>()
+            });
+            services.AddTransient(s => new MenuOptionView
+            {
+                DataContext = s.GetRequiredService<MenuOptionViewModel>()
+            });
+            services.AddTransient(s => new PaymentView
+            {
+                DataContext = s.GetRequiredService<PaymentViewModel>()
             });
 
             return services.BuildServiceProvider();

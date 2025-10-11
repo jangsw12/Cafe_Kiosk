@@ -1,13 +1,17 @@
 ﻿using Cafe_Kiosk.Models;
 using Cafe_Kiosk.Services.Cart;
 using Cafe_Kiosk.ViewModels;
+using Cafe_Kiosk.ViewModels.Payment;
 using Cafe_Kiosk.Views;
+using Cafe_Kiosk.Views.Payment;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace Cafe_Kiosk.Services.Dialog
 {
@@ -58,6 +62,25 @@ namespace Cafe_Kiosk.Services.Dialog
             dialog.ShowDialog();
 
             return dialog.Result;
+        }
+
+        public void ShowPaymentDialog()
+        {
+            var paymentWindow = new PaymentView()
+            {
+                Width = Application.Current.MainWindow.ActualWidth * 0.75,
+                Height = Application.Current.MainWindow.ActualHeight * 0.75,
+                Owner = Application.Current.MainWindow,
+                WindowStartupLocation = WindowStartupLocation.Manual
+            };
+
+            paymentWindow.Left = Application.Current.MainWindow.Left +
+                                   (Application.Current.MainWindow.Width - paymentWindow.Width) / 2;
+            paymentWindow.Top = Application.Current.MainWindow.Top +
+                                   (Application.Current.MainWindow.Height - paymentWindow.Height) / 2;
+
+            paymentWindow.DataContext = App.Current.Services.GetRequiredService<PaymentViewModel>();
+            paymentWindow.ShowDialog();
         }
     }
 }

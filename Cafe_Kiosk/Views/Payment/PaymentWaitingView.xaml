@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Cafe_Kiosk.Views.Payment"
+<<<<<<< HEAD
              mc:Ignorable="d" 
              d:DesignHeight="1000" d:DesignWidth="720">
     <Grid Background="Transparent">
@@ -11,5 +12,50 @@
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    FontSize="35"/>
+=======
+             xmlns:fa6="http://schemas.fontawesome.com/icons/svg"
+             mc:Ignorable="d" 
+             d:DesignHeight="1000" d:DesignWidth="720">
+    <Grid Background="Transparent"
+          Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+        <!--Info Text-->
+        <TextBlock Grid.Row="0"
+                   Text="Payment Waiting View."
+                   FontSize="18"
+                   FontWeight="SemiBold"
+                   Margin="0 0 0 20"/>
+
+        <!--Cart Items List-->
+        <ListView Grid.Row="1">
+
+        </ListView>
+
+        <!--Buttons-->
+        <StackPanel Grid.Row="2"
+                    Margin="0 0 10 10"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+            <Button Width="120"
+                    Command="{Binding GoBackCommand}">
+                <StackPanel Orientation="Horizontal">
+                    <fa6:SvgAwesome Icon="Solid_LeftLong"
+                                    Width="30" Height="30"
+                                    Margin="5 0"/>
+                    <TextBlock Text="이전 화면"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            <Button Content="결제 진행하기"
+                    Width="120"
+                    Command="{Binding ProceedPaymentCommand}"/>
+        </StackPanel>
+>>>>>>> feature/payment
     </Grid>
 </UserControl>

@@ -9,6 +9,13 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+<<<<<<< HEAD
+=======
+using System.Windows.Navigation;
+using System.Windows;
+using System.Windows.Input;
+using Cafe_Kiosk.Commands;
+>>>>>>> feature/payment
 
 namespace Cafe_Kiosk.ViewModels.Payment
 {

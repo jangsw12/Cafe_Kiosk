@@ -4,7 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cafe_Kiosk.Views.Payment"
+<<<<<<< HEAD
         xmlns:vm="clr-namespace:Cafe_Kiosk.ViewModels.Payment"
+=======
+        xmlns:vm="clr-namespace:Cafe_Kiosk.ViewModels.Payment" 
+>>>>>>> feature/payment
         mc:Ignorable="d"
         Height="1000" Width="720"
         WindowStyle="None"
@@ -31,7 +35,11 @@
             <local:ReceiptOptionView/>
         </DataTemplate>
     </Window.Resources>
+<<<<<<< HEAD
    
+=======
+
+>>>>>>> feature/payment
     <Border Background="#E6DED0"
             CornerRadius="15"
             BorderThickness="1"

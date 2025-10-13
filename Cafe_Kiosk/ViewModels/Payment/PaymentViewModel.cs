@@ -9,6 +9,10 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Navigation;
+using System.Windows;
+using System.Windows.Input;
+using Cafe_Kiosk.Commands;
 
 namespace Cafe_Kiosk.ViewModels.Payment
 {

@@ -3,6 +3,7 @@ using Cafe_Kiosk.Services.Cart;
 using Cafe_Kiosk.Services.Dialog;
 using Cafe_Kiosk.Services.MenuData;
 using Cafe_Kiosk.Services.Navi;
+using Cafe_Kiosk.Services.Payment;
 using Cafe_Kiosk.Stores;
 using Cafe_Kiosk.ViewModels;
 using Cafe_Kiosk.ViewModels.Payment;
@@ -41,6 +42,7 @@ namespace Cafe_Kiosk
             services.AddSingleton<IDialogService, DialogService>();
             services.AddSingleton<ICartService, CartService>();
             services.AddSingleton<INavigationService, NavigationService>();
+            services.AddSingleton<IPaymentFlowManager, PaymentFlowManager>();
 
             // ViewModels
             services.AddSingleton<MainViewModel>();

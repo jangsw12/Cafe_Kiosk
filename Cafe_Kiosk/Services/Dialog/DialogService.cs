@@ -17,17 +17,21 @@ namespace Cafe_Kiosk.Services.Dialog
 {
     public class DialogService : IDialogService
     {
-        private Window _window;
+        // Properties
+        private Window _menuOptionWindow;
+        private Window _paymentWindow;
         private readonly ICartService _cartService;
 
+        // Constructor
         public DialogService(ICartService cartService)
         {
             _cartService = cartService;
         }
 
+        // Methods
         public void ShowMenuOptionDialog(CafeMenuItem menuItem)
         {
-            _window = new MenuOptionView()
+            _menuOptionWindow = new MenuOptionView()
             {
                 Width = Application.Current.MainWindow.ActualWidth * 0.75,
                 Height = Application.Current.MainWindow.ActualHeight * 0.75,
@@ -35,19 +39,19 @@ namespace Cafe_Kiosk.Services.Dialog
                 WindowStartupLocation = WindowStartupLocation.Manual
             };
 
-            _window.Left = Application.Current.MainWindow.Left +
-                                   (Application.Current.MainWindow.Width - _window.Width) / 2;
-            _window.Top = Application.Current.MainWindow.Top + 
-                                   (Application.Current.MainWindow.Height - _window.Height) / 2;
+            _menuOptionWindow.Left = Application.Current.MainWindow.Left +
+                                   (Application.Current.MainWindow.Width - _menuOptionWindow.Width) / 2;
+            _menuOptionWindow.Top = Application.Current.MainWindow.Top + 
+                                   (Application.Current.MainWindow.Height - _menuOptionWindow.Height) / 2;
 
-            _window.DataContext = new MenuOptionViewModel(menuItem, this, _cartService);
-            _window.ShowDialog();
+            _menuOptionWindow.DataContext = new MenuOptionViewModel(menuItem, this, _cartService);
+            _menuOptionWindow.ShowDialog();
         }
 
         public void CloseMenuOptionDialog()
         {
-            _window?.Close();
-            _window = null;
+            _menuOptionWindow?.Close();
+            _menuOptionWindow = null;
         }
 
         public bool ShowConfirmation(string message, string title)
@@ -66,7 +70,7 @@ namespace Cafe_Kiosk.Services.Dialog
 
         public void ShowPaymentDialog()
         {
-            var paymentWindow = new PaymentView()
+            _paymentWindow = new PaymentView()
             {
                 Width = Application.Current.MainWindow.ActualWidth * 0.75,
                 Height = Application.Current.MainWindow.ActualHeight * 0.75,
@@ -74,13 +78,19 @@ namespace Cafe_Kiosk.Services.Dialog
                 WindowStartupLocation = WindowStartupLocation.Manual
             };
 
-            paymentWindow.Left = Application.Current.MainWindow.Left +
-                                   (Application.Current.MainWindow.Width - paymentWindow.Width) / 2;
-            paymentWindow.Top = Application.Current.MainWindow.Top +
-                                   (Application.Current.MainWindow.Height - paymentWindow.Height) / 2;
+            _paymentWindow.Left = Application.Current.MainWindow.Left +
+                                   (Application.Current.MainWindow.Width - _paymentWindow.Width) / 2;
+            _paymentWindow.Top = Application.Current.MainWindow.Top +
+                                   (Application.Current.MainWindow.Height - _paymentWindow.Height) / 2;
 
-            paymentWindow.DataContext = App.Current.Services.GetRequiredService<PaymentViewModel>();
-            paymentWindow.ShowDialog();
+            _paymentWindow.DataContext = App.Current.Services.GetRequiredService<PaymentViewModel>();
+            _paymentWindow.ShowDialog();
+        }
+
+        public void ClosePaymentDialog()
+        {
+            _paymentWindow?.Close();
+            _paymentWindow = null;
         }
     }
 }

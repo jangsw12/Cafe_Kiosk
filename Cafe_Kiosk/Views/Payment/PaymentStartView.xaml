@@ -34,17 +34,21 @@
             <ListView.ItemTemplate>
                 <DataTemplate DataType="{x:Type model:CartItem}">
                     <DockPanel Margin="5">
-                        <TextBlock Text="{Binding Name}"
+                        <Image Source="{Binding MenuItem.ImageUri}"
+                               Width="50" Height="50"
+                               Margin="5 0"/>
+                        <TextBlock Text="{Binding MenuItem.Name}"
                                    FontWeight="Bold"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Center"
                                    Width="200"/>
-                        <TextBlock Text="{Binding OptionDisplay}"
-                                   Foreground="Gray"
-                                   Width="150"/>
                         <TextBlock Text="{Binding Quantity}"
                                    HorizontalAlignment="Right"
+                                   VerticalAlignment="Center"
                                    Width="50"/>
                         <TextBlock Text="{Binding TotalPrice, StringFormat='\{0:N0}'}"
                                    HorizontalAlignment="Right"
+                                   VerticalAlignment="Center"
                                    Width="100"/>
                     </DockPanel>
                 </DataTemplate>

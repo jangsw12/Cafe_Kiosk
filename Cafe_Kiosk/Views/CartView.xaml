@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="200" d:DesignWidth="720">
     <Grid Margin="10"
-          Background="#F5F1E9">
+          Background="Transparent">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1.5*"/>
             <ColumnDefinition Width="*"/>
@@ -15,7 +15,8 @@
         
         <!--Cart List-->
         <ListView Grid.Column="0"
-                  Background="#D2B48C"
+                  Background="#E6D3B3"
+                  Margin="5"
                   ScrollViewer.CanContentScroll="False"
                   VirtualizingStackPanel.IsVirtualizing="True"
                   VirtualizingStackPanel.VirtualizationMode="Recycling"
@@ -36,10 +37,18 @@
                         </Grid.ColumnDefinitions>
                         
                         <!--Image-->
-                        <Image Grid.Column="0"
-                               Source="{Binding MenuItem.ImageUri}"
-                               Width="60" Height="60"/>
-
+                        <Border Grid.Column="0"
+                                Width="60" Height="60"
+                                Background="#FAF3E0"
+                                CornerRadius="4"
+                                Margin="5"
+                                VerticalAlignment="Center" HorizontalAlignment="Center"
+                                BorderBrush="LightGray"
+                                BorderThickness="1">
+                            <Image Source="{Binding MenuItem.ImageUri}"
+                                   Stretch="Uniform"/>
+                        </Border>
+                        
                         <!--Menu-->
                         <StackPanel Grid.Column="1"
                                     Margin="10 0">
@@ -111,7 +120,7 @@
 
         <!--Payment Section-->
         <Grid Grid.Column="1"
-              Background="#A3B18A"
+              Background="#FAF3E0"
               HorizontalAlignment="Stretch"
               VerticalAlignment="Stretch"
               Margin="3">

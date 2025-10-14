@@ -7,11 +7,12 @@
              xmlns:fa6="http://schemas.fontawesome.com/icons/svg"
              mc:Ignorable="d" 
              d:DesignHeight="1000" d:DesignWidth="720">
-    <Grid Background="Transparent">
+    <Grid Background="Transparent"
+          Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
 
         <!--Info Text-->
@@ -22,7 +23,8 @@
                    Margin="0 0 0 20"/>
 
         <!--Cart Items List-->
-        <ListView Grid.Row="1">
+        <ListView Grid.Row="1"
+                  Margin="0 0 0 20">
 
         </ListView>
 

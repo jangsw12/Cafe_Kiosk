@@ -5,15 +5,22 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Cafe_Kiosk.Views.Payment"
              xmlns:model="clr-namespace:Cafe_Kiosk.Models" 
-             xmlns:fa6="http://schemas.fontawesome.com/icons/svg"
+             xmlns:fa6="http://schemas.fontawesome.com/icons/svg" 
+             xmlns:converters="clr-namespace:Cafe_Kiosk.Converters"
              mc:Ignorable="d" 
              d:DesignHeight="1000" d:DesignWidth="720">
+
+    <UserControl.Resources>
+        <converters:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
+    </UserControl.Resources>
+    
     <Grid Background="Transparent"
-          Margin="30">
+          Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
 
         <!--Info Text-->
@@ -27,36 +34,80 @@
         <ListView Grid.Row="1"
                   ItemsSource="{Binding CartItems}"
                   Margin="0 0 0 20"
-                  Background="White"
+                  Background="#EFEFEF"
                   BorderBrush="Gray"
                   BorderThickness="1"
-                  Padding="10">
-            <ListView.ItemTemplate>
-                <DataTemplate DataType="{x:Type model:CartItem}">
-                    <DockPanel Margin="5">
-                        <Image Source="{Binding MenuItem.ImageUri}"
-                               Width="50" Height="50"
-                               Margin="5 0"/>
-                        <TextBlock Text="{Binding MenuItem.Name}"
-                                   FontWeight="Bold"
-                                   HorizontalAlignment="Right"
-                                   VerticalAlignment="Center"
-                                   Width="200"/>
-                        <TextBlock Text="{Binding Quantity}"
-                                   HorizontalAlignment="Right"
-                                   VerticalAlignment="Center"
-                                   Width="50"/>
-                        <TextBlock Text="{Binding TotalPrice, StringFormat='\{0:N0}'}"
-                                   HorizontalAlignment="Right"
-                                   VerticalAlignment="Center"
-                                   Width="100"/>
-                    </DockPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
+                  Padding="5">
+            <ListView.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Foreground" Value="Black"/>
+                </Style>    
+            </ListView.Resources>
+            
+            <ListView.View>
+                <GridView>
+                    <!--Image-->
+                    <GridViewColumn Header="이미지" Width="80">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Border Width="60" Height="60"
+                                        Background="White"
+                                        BorderBrush="LightGray"
+                                        BorderThickness="1"
+                                        CornerRadius="4">
+                                    <Image Source="{Binding MenuItem.ImageUri}"
+                                           Stretch="Uniform"
+                                           Visibility="{Binding MenuItem.ImageUri, Converter={StaticResource NullToVisibilityConverter}}"/>
+                                </Border>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <!--Name-->
+                    <GridViewColumn Header="이름" Width="80" DisplayMemberBinding="{Binding MenuItem.Name}"/>
+
+                    <!--Size / Shot-->
+                    <GridViewColumn Header="사이즈 / 샷" Width="80">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding DisplayCoffeeSize}"/>
+                                    <TextBlock Text="{Binding DisplayShotCount}"
+                                               Foreground="Gray"
+                                               FontSize="12"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <!--Temperature-->
+                    <GridViewColumn Header="온도 / 얼음량" Width="120" DisplayMemberBinding="{Binding DisplayTemperatureWithIce}"/>
+
+                    <!--Quantity-->
+                    <GridViewColumn Header="개수" Width="40" DisplayMemberBinding="{Binding Quantity}"/>
+
+                    <!--Total Price-->
+                    <GridViewColumn Header="총 가격" Width="80">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding TotalPrice, StringFormat='\{0:N0}'}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
         </ListView>
 
+        <!--Total Price-->
+        <TextBlock Grid.Row="2"
+                   Text="{Binding TotalCartPrice, StringFormat='총 결제 금액: {0:N0}원'}"
+                   FontSize="18"
+                   FontWeight="Bold"
+                   TextAlignment="Right"
+                   Margin="5 10 5 5"/>
+
         <!--Buttons-->
-        <StackPanel Grid.Row="2"
+        <StackPanel Grid.Row="3"
                 Margin="0 0 10 10"
                 Orientation="Horizontal"
                 HorizontalAlignment="Right">

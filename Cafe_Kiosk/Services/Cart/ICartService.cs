@@ -11,6 +11,9 @@ namespace Cafe_Kiosk.Services.Cart
     public interface ICartService
     {
         void AddItem(CartItem item);
+        void RemoveItem(CartItem item);
+        void ClearCart();
+        bool HasItems();
         ObservableCollection<CartItem> GetItems();
     }
 }

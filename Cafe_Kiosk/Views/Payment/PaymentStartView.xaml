@@ -4,12 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Cafe_Kiosk.Views.Payment"
-<<<<<<< HEAD
-             xmlns:model="clr-namespace:Cafe_Kiosk.Models" xmlns:fa6="http://schemas.fontawesome.com/icons/svg"
-=======
              xmlns:model="clr-namespace:Cafe_Kiosk.Models" 
              xmlns:fa6="http://schemas.fontawesome.com/icons/svg"
->>>>>>> feature/payment
              mc:Ignorable="d" 
              d:DesignHeight="1000" d:DesignWidth="720">
     <Grid Background="Transparent"
@@ -17,14 +13,9 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-<<<<<<< HEAD
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-=======
             <RowDefinition Height="70"/>
->>>>>>> feature/payment
         </Grid.RowDefinitions>
-        
+
         <!--Info Text-->
         <TextBlock Grid.Row="0"
                    Text="아래 내용을 확인한 후 결제를 진행해주세요."
@@ -43,79 +34,47 @@
             <ListView.ItemTemplate>
                 <DataTemplate DataType="{x:Type model:CartItem}">
                     <DockPanel Margin="5">
-                        <TextBlock Text="{Binding Name}"
+                        <Image Source="{Binding MenuItem.ImageUri}"
+                               Width="50" Height="50"
+                               Margin="5 0"/>
+                        <TextBlock Text="{Binding MenuItem.Name}"
                                    FontWeight="Bold"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Center"
                                    Width="200"/>
-                        <TextBlock Text="{Binding OptionDisplay}"
-                                   Foreground="Gray"
-                                   Width="150"/>
                         <TextBlock Text="{Binding Quantity}"
                                    HorizontalAlignment="Right"
+                                   VerticalAlignment="Center"
                                    Width="50"/>
                         <TextBlock Text="{Binding TotalPrice, StringFormat='\{0:N0}'}"
                                    HorizontalAlignment="Right"
+                                   VerticalAlignment="Center"
                                    Width="100"/>
                     </DockPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-<<<<<<< HEAD
-        
-        <!--Total Price-->
-        <StackPanel Grid.Row="2"
-                    Orientation="Horizontal"
-                    HorizontalAlignment="Right"
-                    Margin="0 0 0 20">
-            <TextBlock Text="총 결제 금액: "
-                       FontSize="18"
-                       FontWeight="SemiBold"/>
-            <TextBlock Text="{Binding TotalCartPrice, StringFormat='\{0:N0}'}"
-                       FontSize="18"
-                       FontWeight="Bold"
-                       Foreground="#C62828"
-                       Margin="10 0 0 0"/>
-        </StackPanel>
-        
-        <!--Buttons-->
-        <StackPanel Grid.Row="3"
-                    Orientation="Horizontal"
-                    HorizontalAlignment="Right">
-            <Button Grid.Column="1"
-                    Command="{Binding GoBackCommand}">
-                <StackPanel Orientation="Horizontal"
-                            VerticalAlignment="Center">
-                    <fa6:SvgAwesome Icon="Solid_ArrowLeft"
-                                    Width="16" Height="16"
-                                    VerticalAlignment="Center"/>
-                    <TextBlock Text="장바구니로 돌아가기"
-                               VerticalAlignment="Center"/>
-                </StackPanel>
-            </Button>
-
-            <Button Content="결제 진행하기"
-                    Command="{Binding ProceedToPaymentCommand}"/>
-=======
 
         <!--Buttons-->
         <StackPanel Grid.Row="2"
-                    Margin="0 0 10 10"
-                    Orientation="Horizontal"
-                    HorizontalAlignment="Right">
+                Margin="0 0 10 10"
+                Orientation="Horizontal"
+                HorizontalAlignment="Right">
             <Button Width="120"
-                    Command="{Binding GoBackCommand}">
+                Command="{Binding GoBackCommand}">
                 <StackPanel Orientation="Horizontal">
                     <fa6:SvgAwesome Icon="Solid_LeftLong"
-                                    Width="30" Height="30"
-                                    Margin="5 0"/>
+                                Width="30" Height="30"
+                                Margin="5 0"/>
                     <TextBlock Text="이전 화면"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Center"/>
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
                 </StackPanel>
             </Button>
             <Button Content="결제 진행하기"
                     Width="120"
                     Command="{Binding ProceedPaymentCommand}"/>
->>>>>>> feature/payment
         </StackPanel>
     </Grid>
 </UserControl>
+    

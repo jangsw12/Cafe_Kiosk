@@ -1,37 +1,28 @@
-<<<<<<< HEAD
 ﻿using System;
-=======
 ﻿using Cafe_Kiosk.Commands;
-using Cafe_Kiosk.Services.Navi;
+using Cafe_Kiosk.Services.Payment;
 using System;
->>>>>>> feature/payment
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-<<<<<<< HEAD
-=======
 using System.Windows.Input;
->>>>>>> feature/payment
 
 namespace Cafe_Kiosk.ViewModels.Payment
 {
     public class PaymentResultViewModel : ViewModelBase
     {
-<<<<<<< HEAD
-
-=======
         // Properties
-        private readonly INavigationService _navigationService;
+        private readonly IPaymentFlowManager _paymentFlowManager;
 
         // Commands
         public ICommand GoBackCommand { get; set; }
         public ICommand ProceedPaymentCommand { get; set; }
 
         // Constructor
-        public PaymentResultViewModel(INavigationService navigationService)
+        public PaymentResultViewModel(IPaymentFlowManager paymentFlowManager)
         {
-            _navigationService = navigationService;
+            _paymentFlowManager = paymentFlowManager;
 
             GoBackCommand = new RelayCommand<object>(GoBack);
             ProceedPaymentCommand = new RelayCommand<object>(ProceedPayment);
@@ -40,13 +31,12 @@ namespace Cafe_Kiosk.ViewModels.Payment
         // Methods
         private void GoBack(object _)
         {
-            _navigationService.Navigate(NaviType.PaymentWaitingView);
+            _paymentFlowManager.GoToPrevious();
         }
 
         private void ProceedPayment(object _)
         {
-            _navigationService.Navigate(NaviType.ReceiptOptionView);
+            _paymentFlowManager.GoToNext();
         }
->>>>>>> feature/payment
     }
 }

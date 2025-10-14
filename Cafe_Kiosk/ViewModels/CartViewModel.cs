@@ -46,23 +46,17 @@ namespace Cafe_Kiosk.ViewModels
             IncreaseQuantityCommand = new RelayCommand<object>(IncreaseQuantity);
             RemoveItemCommand = new RelayCommand<object>(RemoveItem);
 
-            CartItems.CollectionChanged += (_, __) =>
+            CartItems.CollectionChanged += (_, e) =>
             {
                 OnPropertyChanged(nameof(TotalCartPrice));
                 (PayCommand as RelayCommand<object>)?.RaiseCanExecuteChanged();
                 (ClearCartCommand as RelayCommand<object>)?.RaiseCanExecuteChanged();
-            };
 
-            foreach (var item in CartItems)
-            {
-                HookItem(item);
-            }
-
-            CartItems.CollectionChanged += (_, e) =>
-            {
                 if (e.NewItems != null)
+                {
                     foreach (CartItem item in e.NewItems)
                         HookItem(item);
+                }
             };
         }
 
@@ -83,26 +77,20 @@ namespace Cafe_Kiosk.ViewModels
             _dialogService.ShowPaymentDialog();
         }
 
-        private bool CanPay(object _)
-        {
-            return CartItems.Any();
-        }
+        private bool CanPay(object _) => _cartService.HasItems();
 
         private void ClearCart(object _)
         {
-            if (CartItems.Count > 0)
+            if (_cartService.HasItems())
             {
                 if (_dialogService.ShowConfirmation("장바구니를 비우시겠습니까?", "비우기 확인"))
                 {
-                    CartItems.Clear();
+                    _cartService.ClearCart();
                 }
             }
         }
 
-        private bool CanClearCart(object _)
-        {
-            return CartItems.Any();
-        }
+        private bool CanClearCart(object _) => _cartService.HasItems();
 
         private void DecreaseQuantity(object parameter)
         {
@@ -124,7 +112,7 @@ namespace Cafe_Kiosk.ViewModels
         {
             if (parameter is CartItem item)
             {
-                CartItems.Remove(item);
+                _cartService.RemoveItem(item);
             }
         }
     }

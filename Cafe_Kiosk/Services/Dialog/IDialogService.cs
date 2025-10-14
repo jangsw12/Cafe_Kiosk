@@ -13,5 +13,6 @@ namespace Cafe_Kiosk.Services.Dialog
         void CloseMenuOptionDialog();
         bool ShowConfirmation(string message, string title);
         void ShowPaymentDialog();
+        void ClosePaymentDialog();
     }
 }

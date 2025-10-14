@@ -18,6 +18,18 @@ namespace Cafe_Kiosk.Services.Cart
             _items.Add(item);
         }
 
+        public void RemoveItem(CartItem item)
+        {
+            _items.Remove(item);
+        }
+
+        public void ClearCart()
+        {
+            _items.Clear();
+        }
+
+        public bool HasItems() => _items.Any();
+       
         public ObservableCollection<CartItem> GetItems()
         {
             return _items;

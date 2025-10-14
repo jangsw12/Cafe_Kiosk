@@ -1,6 +1,5 @@
 ﻿using Cafe_Kiosk.Models;
 using Cafe_Kiosk.Services.Cart;
-using Cafe_Kiosk.Services.Navi;
 using Cafe_Kiosk.Stores;
 using System;
 using System.Collections.Generic;
@@ -9,13 +8,11 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-<<<<<<< HEAD
-=======
 using System.Windows.Navigation;
 using System.Windows;
 using System.Windows.Input;
 using Cafe_Kiosk.Commands;
->>>>>>> feature/payment
+using Cafe_Kiosk.Services.Payment;
 
 namespace Cafe_Kiosk.ViewModels.Payment
 {
@@ -23,6 +20,7 @@ namespace Cafe_Kiosk.ViewModels.Payment
     {
         // Properties
         private readonly PaymentNavigationStore _paymentNavigationStore;
+        private readonly IPaymentFlowManager _paymentFlowManager;
         private readonly ICartService _cartService;
 
         private INotifyPropertyChanged? _currentViewModel;
@@ -39,21 +37,18 @@ namespace Cafe_Kiosk.ViewModels.Payment
             }
         }
 
-        public ObservableCollection<CartItem> CartItems => _cartService.GetItems();
-
-        public int TotalCartPrice => CartItems.Sum(item => item.TotalPrice);
-
         // Constructor
-        public PaymentViewModel(PaymentNavigationStore paymentNavigationStore, INavigationService navigationService, 
+        public PaymentViewModel(PaymentNavigationStore paymentNavigationStore, IPaymentFlowManager paymentFlowManager, 
                                 ICartService cartService)
         {
             _paymentNavigationStore = paymentNavigationStore;
+            _paymentFlowManager = paymentFlowManager;
+
             _cartService = cartService;
 
             _paymentNavigationStore.CurrentViewModelChanged += CurrentViewModelChanged;
 
-            // Payment Start View
-            navigationService.Navigate(NaviType.PaymentStartView);
+            _paymentFlowManager.GoToStart();
         }
 
         // Methods

@@ -30,23 +30,33 @@
 
         <!--Buttons-->
         <StackPanel Grid.Row="2"
-                    Margin="0 0 10 10"
-                    Orientation="Horizontal"
-                    HorizontalAlignment="Right">
+            Margin="0 0 10 10"
+            Orientation="Horizontal"
+            HorizontalAlignment="Right">
             <Button Width="120"
-                    Command="{Binding GoBackCommand}">
+           Command="{Binding GoBackCommand}">
                 <StackPanel Orientation="Horizontal">
                     <fa6:SvgAwesome Icon="Solid_LeftLong"
-                                    Width="30" Height="30"
-                                    Margin="5 0"/>
+                           Width="20" Height="20"
+                           Margin="5 0"/>
                     <TextBlock Text="이전 화면"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Center"/>
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"
+                      FontSize="15"/>
                 </StackPanel>
             </Button>
-            <Button Content="결제 진행하기"
-                    Width="120"
-                    Command="{Binding ProceedPaymentCommand}"/>
+            <Button Width="120"
+            Command="{Binding ProceedPaymentCommand}">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="결제 진행"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="15"/>
+                    <fa6:SvgAwesome Icon="Solid_RightLong"
+                            Width="20" Height="20"
+                            Margin="5 0"/>
+                </StackPanel>
+            </Button>
         </StackPanel>
     </Grid>
 </UserControl>

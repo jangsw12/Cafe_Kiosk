@@ -4,9 +4,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Cafe_Kiosk.Views.Payment" 
-             xmlns:fa6="http://schemas.fontawesome.com/icons/svg"
+             xmlns:fa6="http://schemas.fontawesome.com/icons/svg" 
+             xmlns:converters="clr-namespace:Cafe_Kiosk.Converters" 
+             xmlns:controls="clr-namespace:Cafe_Kiosk.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="1000" d:DesignWidth="720">
+
+    <UserControl.Resources>
+        <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+    </UserControl.Resources>
+    
     <Grid Background="Transparent"
           Margin="20">
         <Grid.RowDefinitions>
@@ -17,36 +24,128 @@
 
         <!--Info Text-->
         <TextBlock Grid.Row="0"
-                   Text="Payment Method View."
+                   Text="결제 수단을 선택해주세요"
                    FontSize="18"
                    FontWeight="SemiBold"
                    Margin="0 0 0 20"/>
 
-        <!--Cart Items List-->
-        <ListView Grid.Row="1"
-                  Margin="0 0 0 20">
+        <!--Payment Method-->
+        <Border Grid.Row="1"
+                Background="#EFEFEF"
+                BorderBrush="Gray"
+                BorderThickness="1"
+                CornerRadius="4"
+                Padding="20">
+            <StackPanel>
+                <!--Payment Method Radio Btn-->
+                <StackPanel Orientation="Horizontal"
+                            Margin="0 0 0 20"
+                            HorizontalAlignment="Center">
+                    <RadioButton Content="신용/체크 카드"
+                                 GroupName="PaymentMethod"
+                                 FontSize="16"
+                                 Margin="0 0 20 0"
+                                 IsChecked="{Binding IsCardSelected}"/>
+                    <RadioButton Content="현금"
+                                 GroupName="PaymentMethod"
+                                 FontSize="16"
+                                 Margin="0 0 20 0"
+                                 IsChecked="{Binding IsCashSelected}"/>
+                    <RadioButton Content="모바일 페이"
+                                 GroupName="PaymentMethod"
+                                 Margin="0 0 20 0"
+                                 FontSize="16"
+                                 IsChecked="{Binding IsMobilePaySelected}"/>
+                </StackPanel>
 
-        </ListView>
+                <!--Input Card Info-->
+                <StackPanel Margin="0 0 0 10"
+                            Visibility="{Binding IsCardSelected, Converter={StaticResource BoolToVisibilityConverter}}">
+                    <TextBlock Text="카드 정보 입력"
+                               FontWeight="Bold"
+                               FontSize="16"
+                               Margin="0 0 0 5"/>
+                    <controls:TextBoxControl WaterMarkText="카드 번호"
+                                             Text="{Binding CardNumber, UpdateSourceTrigger=PropertyChanged}"
+                                             Margin="0 0 0 10"
+                                             FontSize="16"
+                                             WaterMarkTextColor="Gray"
+                                             Padding="8"
+                                             BorderBrush="Gray"
+                                             BorderThickness="1"
+                                             Validating="{Binding IsCardNumberInValid}"/>
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Left">
+                        <controls:TextBoxControl WaterMarkText="유효기간"
+                                                 Text="{Binding CardExpiry, UpdateSourceTrigger=PropertyChanged}"
+                                                 Width="120"
+                                                 Margin="0 0 10 10"
+                                                 FontSize="16"
+                                                 WaterMarkTextColor="Gray"
+                                                 Padding="8"
+                                                 BorderBrush="Gray"
+                                                 BorderThickness="1"
+                                                 Validating="{Binding IsCardExpiryInValid}"/>
+                        <controls:TextBoxControl WaterMarkText="CVC"
+                                                 Text="{Binding CardCVC, UpdateSourceTrigger=PropertyChanged}"
+                                                 Width="80"
+                                                 Margin="0 0 0 10"
+                                                 FontSize="16"
+                                                 WaterMarkTextColor="Gray"
+                                                 Padding="8"
+                                                 BorderBrush="Gray"
+                                                 BorderThickness="1"
+                                                 Validating="{Binding IsCardCVCInValid}"/>
+                    </StackPanel>
+                </StackPanel>
 
+                <!--Mobile Pay-->
+                <TextBlock Margin="0 0 0 10"
+                           Foreground="#666"
+                           FontSize="14"
+                           TextWrapping="Wrap"
+                           Visibility="{Binding IsMobilePaySelected, Converter={StaticResource BoolToVisibilityConverter}}"
+                           Text="모바일 페이 결제를 위해 QR 코드를 스캔해주세요."/>
+
+                <!--Cash-->
+                <TextBlock Margin="0 0 0 10"
+                           Foreground="#666"
+                           FontSize="14"
+                           TextWrapping="Wrap"
+                           Visibility="{Binding IsCashSelected, Converter={StaticResource BoolToVisibilityConverter}}"
+                           Text="현금을 투입구에 넣어주세요."/>
+            </StackPanel>
+        </Border>
+        
         <!--Buttons-->
-            <StackPanel Grid.Row="2"
+        <StackPanel Grid.Row="2"
                     Margin="0 0 10 10"
                     Orientation="Horizontal"
                     HorizontalAlignment="Right">
-                <Button Width="120"
-                    Command="{Binding GoBackCommand}">
-                    <StackPanel Orientation="Horizontal">
-                        <fa6:SvgAwesome Icon="Solid_LeftLong"
-                                    Width="30" Height="30"
-                                    Margin="5 0"/>
-                        <TextBlock Text="이전 화면"
+           <Button Width="120"
+                   Command="{Binding GoBackCommand}">
+               <StackPanel Orientation="Horizontal">
+                   <fa6:SvgAwesome Icon="Solid_LeftLong"
+                                   Width="20" Height="20"
+                                   Margin="5 0"/>
+                   <TextBlock Text="이전 화면"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              FontSize="15"/>
+               </StackPanel>
+           </Button>
+            <Button Width="120"
+                    Command="{Binding ProceedPaymentCommand}">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="결제 진행"
                                HorizontalAlignment="Center"
-                               VerticalAlignment="Center"/>
-                    </StackPanel>
-                </Button>
-                <Button Content="결제 진행하기"
-                    Width="120"
-                    Command="{Binding ProceedPaymentCommand}"/>
-            </StackPanel>
-        </Grid>
+                               VerticalAlignment="Center"
+                               FontSize="15"/>
+                    <fa6:SvgAwesome Icon="Solid_RightLong"
+                                    Width="20" Height="20"
+                                    Margin="5 0"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+    </Grid>
 </UserControl>

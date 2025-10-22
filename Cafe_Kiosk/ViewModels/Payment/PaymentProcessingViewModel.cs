@@ -15,32 +15,21 @@ namespace Cafe_Kiosk.ViewModels.Payment
         // Properties
         private readonly IPaymentFlowManager _paymentFlowManager;
 
-        // Commands
-        public ICommand GoBackCommand { get; set; }
-        public ICommand ProceedPaymentCommand { get; set; }
-
         // Constructor
         public PaymentProcessingViewModel(IPaymentFlowManager paymentFlowManager)
         {
             _paymentFlowManager = paymentFlowManager;
 
-            GoBackCommand = new RelayCommand<object>(GoBack);
-            ProceedPaymentCommand = new RelayCommand<object>(ProceedPayment);
-
-            //ProceedPayment();
+            StartProcessing();
         }
 
         // Methods
-        private void GoBack(object _)
+        private async void StartProcessing()
         {
-            _paymentFlowManager.GoToPrevious();
-        }
+            // 지연 시간(2초) >> 추후 API 작업으로 변경
+            await Task.Delay(2000);
 
-        private /*async*/ void ProceedPayment(object _)
-        {
             _paymentFlowManager.GoToNext();
-
-            //_paymentFlowManager.GoToResult(result.IsSuccess);
         }
     }
 }

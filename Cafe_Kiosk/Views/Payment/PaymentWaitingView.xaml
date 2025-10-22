@@ -10,53 +10,47 @@
     <Grid Background="Transparent"
           Margin="20">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <!--Info Text-->
-        <TextBlock Grid.Row="0"
-                   Text="Payment Waiting View."
-                   FontSize="18"
-                   FontWeight="SemiBold"
-                   Margin="0 0 0 20"/>
+        <StackPanel Grid.Row="0"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical"
+                    Margin="0 40">
+            <TextBlock Text="{Binding WaitingMessage}"
+                       FontSize="22"
+                       FontWeight="SemiBold"
+                       TextAlignment="Center"
+                       TextWrapping="Wrap"
+                       Margin="0 0 0 20"/>
 
-        <!--Cart Items List-->
-        <ListView Grid.Row="1"
-                  Margin="0 0 0 20">
-
-        </ListView>
+            <ProgressBar IsIndeterminate="True"
+                         Width="200"
+                         Height="10"
+                         Foreground="#0078D7"/>
+        </StackPanel>
 
         <!--Buttons-->
-        <StackPanel Grid.Row="2"
-            Margin="0 0 10 10"
-            Orientation="Horizontal"
-            HorizontalAlignment="Right">
-            <Button Width="120"
-           Command="{Binding GoBackCommand}">
-                <StackPanel Orientation="Horizontal">
-                    <fa6:SvgAwesome Icon="Solid_LeftLong"
-                           Width="20" Height="20"
-                           Margin="5 0"/>
-                    <TextBlock Text="이전 화면"
-                      HorizontalAlignment="Center"
-                      VerticalAlignment="Center"
-                      FontSize="15"/>
-                </StackPanel>
-            </Button>
-            <Button Width="120"
-            Command="{Binding ProceedPaymentCommand}">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="결제 진행"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="15"/>
-                    <fa6:SvgAwesome Icon="Solid_RightLong"
-                            Width="20" Height="20"
-                            Margin="5 0"/>
-                </StackPanel>
-            </Button>
-        </StackPanel>
+        <Button Grid.Row="1"
+                Width="100"
+                Height="40"
+                FontSize="16"
+                HorizontalAlignment="Right"
+                Margin="0 10 0 0"
+                Visibility="Collapsed"
+                Command="{Binding GoBackCommand}">
+            <StackPanel Orientation="Horizontal">
+                <fa6:SvgAwesome Icon="Solid_LeftLong"
+                                Width="20" Height="20"
+                                Margin="5 0"/>
+                <TextBlock Text="이전 화면"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontSize="15"/>
+            </StackPanel>
+        </Button>
     </Grid>
 </UserControl>

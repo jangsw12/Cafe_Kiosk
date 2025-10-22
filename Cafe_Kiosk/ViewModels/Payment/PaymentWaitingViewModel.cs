@@ -15,9 +15,19 @@ namespace Cafe_Kiosk.ViewModels.Payment
         // Properties
         private readonly IPaymentFlowManager _paymentFlowManager;
 
+        private string _waitingMessage;
+
+        public string WaitingMessage
+        {
+            get { return _waitingMessage; }
+            set { 
+                _waitingMessage = value;
+                OnPropertyChanged();
+            }
+        }
+
         // Commands
         public ICommand GoBackCommand { get; set; }
-        public ICommand ProceedPaymentCommand { get; set; }
 
         // Constructor
         public PaymentWaitingViewModel(IPaymentFlowManager paymentFlowManager)
@@ -25,7 +35,10 @@ namespace Cafe_Kiosk.ViewModels.Payment
             _paymentFlowManager = paymentFlowManager;
 
             GoBackCommand = new RelayCommand<object>(GoBack);
-            ProceedPaymentCommand = new RelayCommand<object>(ProceedPayment);
+
+            //WaitingMessage = GetMessageForPaymentType();
+
+            StartWaiting();
         }
 
         // Methods
@@ -34,8 +47,16 @@ namespace Cafe_Kiosk.ViewModels.Payment
             _paymentFlowManager.GoToPrevious();
         }
 
-        private void ProceedPayment(object _)
+        private void GetMessageForPaymentType()
         {
+
+        }
+
+        private async void StartWaiting()
+        {
+            // 추후 실제 상태 감지 로직으로 대체
+            await Task.Delay(3000);
+
             _paymentFlowManager.GoToNext();
         }
     }

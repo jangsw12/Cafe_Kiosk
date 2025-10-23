@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Cafe_Kiosk.Models.Enums;
 
 namespace Cafe_Kiosk.ViewModels.Payment
 {
@@ -29,7 +30,12 @@ namespace Cafe_Kiosk.ViewModels.Payment
             // 지연 시간(2초) >> 추후 API 작업으로 변경
             await Task.Delay(2000);
 
-            _paymentFlowManager.GoToNext();
+            var method = _paymentFlowManager.GetSelectedMethod();
+
+            if (method == PaymentMethod.Card)
+                _paymentFlowManager.GoToNext();
+            else
+                _paymentFlowManager.GoToResult(true);
         }
     }
 }

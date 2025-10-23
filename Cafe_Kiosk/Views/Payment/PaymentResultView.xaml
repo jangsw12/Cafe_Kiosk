@@ -9,54 +9,31 @@
              d:DesignHeight="1000" d:DesignWidth="720">
     <Grid Background="Transparent"
           Margin="20">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="60"/>
-        </Grid.RowDefinitions>
-
-        <!--Info Text-->
-        <TextBlock Grid.Row="0"
-                   Text="Payment Result View."
-                   FontSize="18"
-                   FontWeight="SemiBold"
-                   Margin="0 0 0 20"/>
-
         <!--Cart Items List-->
-        <ListView Grid.Row="1"
-                  Margin="0 0 0 20">
+        <StackPanel Margin="0 40"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical">
 
-        </ListView>
+            <!--Icon-->
+            <fa6:SvgAwesome Icon="{Binding ResultIcon}"
+                            PrimaryColor="{Binding ResultColor}"
+                            Width="80" Height="80"
+                            Margin="0 0 0 20"/>
 
-        <!--Buttons-->
-        <StackPanel Grid.Row="2"
-            Margin="0 0 10 10"
-            Orientation="Horizontal"
-            HorizontalAlignment="Right">
-            <Button Width="120"
-           Command="{Binding GoBackCommand}">
-                <StackPanel Orientation="Horizontal">
-                    <fa6:SvgAwesome Icon="Solid_LeftLong"
-                           Width="20" Height="20"
-                           Margin="5 0"/>
-                    <TextBlock Text="이전 화면"
-                      HorizontalAlignment="Center"
-                      VerticalAlignment="Center"
-                      FontSize="15"/>
-                </StackPanel>
-            </Button>
-            <Button Width="120"
-            Command="{Binding ProceedPaymentCommand}">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="결제 진행"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontSize="15"/>
-                    <fa6:SvgAwesome Icon="Solid_RightLong"
-                            Width="20" Height="20"
-                            Margin="5 0"/>
-                </StackPanel>
-            </Button>
+            <!--Result Message-->
+            <TextBlock Text="{Binding ResultMessage}"
+                       FontSize="24"
+                       FontWeight="SemiBold"
+                       Foreground="{Binding ResultColor}"
+                       TextAlignment="Center"
+                       Margin="0 0 0 20"/>
+
+            <!--Add Info-->
+            <TextBlock Text="잠시 후 영수증 선택 화면으로 이동합니다."
+                       FontSize="16"
+                       Foreground="Gray"
+                       TextAlignment="Center"/>
         </StackPanel>
     </Grid>
 </UserControl>

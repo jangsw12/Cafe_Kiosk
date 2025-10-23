@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows;
 using Cafe_Kiosk.Services.Payment;
+using Cafe_Kiosk.Models.Enums;
 
 namespace Cafe_Kiosk.ViewModels.Payment
 {
@@ -155,6 +156,13 @@ namespace Cafe_Kiosk.ViewModels.Payment
 
         private void ProceedPayment(object _)
         {
+            if (IsCardSelected)
+                _paymentFlowManager.SetSelectedMethod(PaymentMethod.Card);
+            else if (IsCashSelected)
+                _paymentFlowManager.SetSelectedMethod(PaymentMethod.Cash);
+            else if (IsMobilePaySelected)
+                _paymentFlowManager.SetSelectedMethod(PaymentMethod.MobilePay);
+
             _paymentFlowManager.GoToNext();
         }
 

@@ -14,50 +14,75 @@ namespace Cafe_Kiosk.ViewModels.Payment
     {
         // Properties
         private readonly IPaymentFlowManager _paymentFlowManager;
+        private CancellationTokenSource _cts;
 
-        private string _waitingMessage;
+        private int _remainingSeconds;
 
-        public string WaitingMessage
+        public int RemainingSeconds
         {
-            get { return _waitingMessage; }
-            set { 
-                _waitingMessage = value;
-                OnPropertyChanged();
+            get { return _remainingSeconds; }
+            set
+            {
+                if (_remainingSeconds != value)
+                {
+                    _remainingSeconds = value;
+                    OnPropertyChanged();
+                    OnPropertyChanged(nameof(RemainingTimeText));
+                }
             }
         }
 
+        public string RemainingTimeText => $"남은 시간 : {RemainingSeconds}초";
+
         // Commands
-        public ICommand GoBackCommand { get; set; }
+        public ICommand CancelCommand { get; set; }
 
         // Constructor
         public PaymentWaitingViewModel(IPaymentFlowManager paymentFlowManager)
         {
             _paymentFlowManager = paymentFlowManager;
-
-            GoBackCommand = new RelayCommand<object>(GoBack);
-
-            //WaitingMessage = GetMessageForPaymentType();
+            CancelCommand = new RelayCommand<object>(Cancel);
 
             StartWaiting();
         }
 
         // Methods
-        private void GoBack(object _)
+        private void Cancel(object _)
         {
+            _cts?.Cancel();
             _paymentFlowManager.GoToPrevious();
-        }
-
-        private void GetMessageForPaymentType()
-        {
-
         }
 
         private async void StartWaiting()
         {
-            // 추후 실제 상태 감지 로직으로 대체
-            await Task.Delay(3000);
+            _cts = new CancellationTokenSource();
+            RemainingSeconds = 30;
 
-            _paymentFlowManager.GoToNext();
+            try
+            {
+                while (RemainingSeconds > 0)
+                {
+                    await Task.Delay(1000, _cts.Token);
+                    RemainingSeconds--;
+                }
+
+                // 시간 지나면 자동 취소 처리
+                if (!_cts.Token.IsCancellationRequested)
+                {
+                    AutoCancel();
+                }
+            }
+            catch (TaskCanceledException)
+            {
+                // 취소 시 무시
+            }
+        }
+
+        private void AutoCancel()
+        {
+            // 결제 시간 초과
+            System.Windows.MessageBox.Show("결제 시간이 초과되었습니다. 결제를 다시 시도해주세요.");
+            _paymentFlowManager.GoToPrevious();
         }
     }
 }

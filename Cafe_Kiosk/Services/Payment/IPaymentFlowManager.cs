@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cafe_Kiosk.Models.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,8 @@ namespace Cafe_Kiosk.Services.Payment
 {
     public interface IPaymentFlowManager
     {
+        void SetSelectedMethod(PaymentMethod method);
+        PaymentMethod GetSelectedMethod();
         void GoToNext();
         void GoToPrevious();
         void GoToStart();

@@ -13,7 +13,7 @@
     <UserControl.Resources>
         <converters:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
     </UserControl.Resources>
-    
+
     <Grid Background="Transparent"
           Margin="20">
         <Grid.RowDefinitions>
@@ -31,72 +31,76 @@
                    Margin="0 0 0 20"/>
 
         <!--Cart Items List-->
-        <ListView Grid.Row="1"
-                  ItemsSource="{Binding CartItems}"
-                  Margin="0 0 0 20"
-                  Background="#EFEFEF"
-                  BorderBrush="Gray"
-                  BorderThickness="1"
-                  Padding="5">
-            <ListView.Resources>
-                <Style TargetType="TextBlock">
-                    <Setter Property="Foreground" Value="Black"/>
-                </Style>    
-            </ListView.Resources>
-            
-            <ListView.View>
-                <GridView>
-                    <!--Image-->
-                    <GridViewColumn Header="이미지" Width="80">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <Border Width="60" Height="60"
-                                        Background="White"
-                                        BorderBrush="LightGray"
-                                        BorderThickness="1"
-                                        CornerRadius="4">
-                                    <Image Source="{Binding MenuItem.ImageUri}"
-                                           Stretch="Uniform"
-                                           Visibility="{Binding MenuItem.ImageUri, Converter={StaticResource NullToVisibilityConverter}}"/>
-                                </Border>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
+        <Border Grid.Row="1"
+                Background="White"
+                CornerRadius="4"
+                BorderBrush="Gray"
+                BorderThickness="1"
+                Padding="5">
+            <ListView ItemsSource="{Binding CartItems}"
+                      Margin="0 0 0 20"
+                      Background="Transparent"
+                      BorderThickness="0">
+                <ListView.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Foreground" Value="Black"/>
+                    </Style>
+                </ListView.Resources>
 
-                    <!--Name-->
-                    <GridViewColumn Header="이름" Width="80" DisplayMemberBinding="{Binding MenuItem.Name}"/>
+                <ListView.View>
+                    <GridView>
+                        <!--Image-->
+                        <GridViewColumn Header="이미지" Width="80">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Border Width="60" Height="60"
+                                            Background="White"
+                                            BorderBrush="LightGray"
+                                            BorderThickness="1"
+                                            CornerRadius="4">
+                                        <Image Source="{Binding MenuItem.ImageUri}"
+                                               Stretch="Uniform"
+                                               Visibility="{Binding MenuItem.ImageUri, Converter={StaticResource NullToVisibilityConverter}}"/>
+                                    </Border>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
 
-                    <!--Size / Shot-->
-                    <GridViewColumn Header="사이즈 / 샷" Width="80">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel>
-                                    <TextBlock Text="{Binding DisplayCoffeeSize}"/>
-                                    <TextBlock Text="{Binding DisplayShotCount}"
-                                               Foreground="Gray"
-                                               FontSize="12"/>
-                                </StackPanel>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
+                        <!--Name-->
+                        <GridViewColumn Header="이름" Width="80" DisplayMemberBinding="{Binding MenuItem.Name}"/>
 
-                    <!--Temperature-->
-                    <GridViewColumn Header="온도 / 얼음량" Width="120" DisplayMemberBinding="{Binding DisplayTemperatureWithIce}"/>
+                        <!--Size / Shot-->
+                        <GridViewColumn Header="사이즈 / 샷" Width="80">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding DisplayCoffeeSize}"/>
+                                        <TextBlock Text="{Binding DisplayShotCount}"
+                                                   Foreground="Gray"
+                                                   FontSize="12"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
 
-                    <!--Quantity-->
-                    <GridViewColumn Header="개수" Width="40" DisplayMemberBinding="{Binding Quantity}"/>
+                        <!--Temperature-->
+                        <GridViewColumn Header="온도 / 얼음량" Width="120" DisplayMemberBinding="{Binding DisplayTemperatureWithIce}"/>
 
-                    <!--Total Price-->
-                    <GridViewColumn Header="총 가격" Width="80">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding TotalPrice, StringFormat='\{0:N0}'}"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                </GridView>
-            </ListView.View>
-        </ListView>
+                        <!--Quantity-->
+                        <GridViewColumn Header="개수" Width="40" DisplayMemberBinding="{Binding Quantity}"/>
+
+                        <!--Total Price-->
+                        <GridViewColumn Header="총 가격" Width="80">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding TotalPrice, StringFormat='\{0:N0}'}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Border>
 
         <!--Total Price-->
         <TextBlock Grid.Row="2"

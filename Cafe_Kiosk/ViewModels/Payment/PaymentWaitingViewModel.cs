@@ -74,7 +74,7 @@ namespace Cafe_Kiosk.ViewModels.Payment
             }
             catch (TaskCanceledException)
             {
-                // 취소 시 무시
+                // 대기 타이머 취소
             }
         }
 

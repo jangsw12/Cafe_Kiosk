@@ -12,49 +12,86 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="70"/>
         </Grid.RowDefinitions>
 
-        <!--Info Text-->
+        <!--Header Info Text-->
         <TextBlock Grid.Row="0"
-                   Text="Receipt Option View."
-                   FontSize="18"
+                   Text="영수증"
+                   FontSize="20"
                    FontWeight="SemiBold"
-                   Margin="0 0 0 20"/>
+                   Foreground="#333"
+                   Margin="0 0 0 25"/>
 
-        <!--Cart Items List-->
-        <ListView Grid.Row="1"
-                  Margin="0 0 0 20">
+        <!--Receipt Info Text-->
+        <Border Grid.Row="1"
+                Background="#EFEFEF"
+                BorderBrush="Gray"
+                BorderThickness="1"
+                CornerRadius="4"
+                Padding="20">
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <TextBlock Text="{Binding OrderNumber, StringFormat='주문번호 {0}번'}"
+                           FontSize="36"
+                           FontWeight="Bold"
+                           Foreground="#FF4A90E2"
+                           HorizontalAlignment="Center"
+                           Margin="0 0 0 30"/>
 
-        </ListView>
+                <TextBlock Text="{Binding TotalCartPrice, StringFormat='총 결제금액: {0:N0}원'}"
+                           FontSize="26"
+                           FontWeight="SemiBold"
+                           Foreground="#222"
+                           HorizontalAlignment="Center"
+                           Margin="0 0 0 15"/>
 
-        <!--Buttons-->
+                <TextBlock Text="{Binding PaymentDate, StringFormat='결제 일시: {0:yyyy-MM-dd HH:mm}'}"
+                           FontSize="20"
+                           Foreground="#666"
+                           HorizontalAlignment="Center"
+                           Margin="0 0 0 25"/>
+
+                <TextBlock Text="잠시 후 음료가 준비됩니다."
+                           FontSize="22"
+                           FontWeight="Medium"
+                           Foreground="#555"
+                           HorizontalAlignment="Center"
+                           TextWrapping="Wrap"
+                           Margin="0 0 0 10"/>
+            </StackPanel>
+        </Border>
+        
+        <!--Button & Timer-->
         <StackPanel Grid.Row="2"
-            Margin="0 0 10 10"
-            Orientation="Horizontal"
-            HorizontalAlignment="Right">
-            <Button Width="120"
-           Command="{Binding GoBackCommand}">
-                <StackPanel Orientation="Horizontal">
-                    <fa6:SvgAwesome Icon="Solid_LeftLong"
-                           Width="20" Height="20"
-                           Margin="5 0"/>
-                    <TextBlock Text="이전 화면"
-                      HorizontalAlignment="Center"
-                      VerticalAlignment="Center"
-                      FontSize="15"/>
-                </StackPanel>
-            </Button>
-            <Button Width="120"
-            Command="{Binding ProceedPaymentCommand}">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="결제 진행"
-                       HorizontalAlignment="Center"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Margin="0 0 10 0">
+            <TextBlock Text="{Binding RemainingSeconds, StringFormat={}{0}초 후 메인 화면으로 돌아갑니다.}"
+                       FontSize="16"
+                       Foreground="#888"
                        VerticalAlignment="Center"
-                       FontSize="15"/>
-                    <fa6:SvgAwesome Icon="Solid_RightLong"
-                            Width="20" Height="20"
-                            Margin="5 0"/>
+                       Margin="0 0 40 0"/>
+
+            <Button Width="140" Height="50"
+                    Background="#4A90E2"
+                    BorderBrush="Transparent"
+                    Foreground="White"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Command="{Binding GoHomeCommand}">
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    <fa6:SvgAwesome Icon="Solid_House"
+                                    Width="18" Height="18"
+                                    Margin="0 0 5 0"
+                                    PrimaryColor="White"/>
+                    <TextBlock Text="처음으로"
+                               VerticalAlignment="Center"
+                               FontSize="15"
+                               Foreground="White"/>
                 </StackPanel>
             </Button>
         </StackPanel>

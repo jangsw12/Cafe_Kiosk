@@ -29,11 +29,7 @@ namespace Cafe_Kiosk.Services.Payment
         }
 
         // Methods
-        public void SetSelectedMethod(PaymentMethod method)
-        {
-            _selectedMethod = method;
-        }
-
+        public void SetSelectedMethod(PaymentMethod method) => _selectedMethod = method;
         public PaymentMethod GetSelectedMethod() => _selectedMethod;
 
         public void GoToNext()
@@ -79,9 +75,7 @@ namespace Cafe_Kiosk.Services.Payment
         public void CompletePayment()
         {
             // 최종 결제 로직 (결제 성공 알림, 카트 비우기)
-            MessageBox.Show("결제 완료!");
             _cartService.ClearCart();
-
             GoToStart();
         }
     }

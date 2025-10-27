@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Cafe_Kiosk.Models.Enums;
+using Cafe_Kiosk.Stores;
 
 namespace Cafe_Kiosk.ViewModels.Payment
 {
@@ -15,27 +16,48 @@ namespace Cafe_Kiosk.ViewModels.Payment
     {
         // Properties
         private readonly IPaymentFlowManager _paymentFlowManager;
+        private readonly PaymentSelectionStore _paymentSelectionStore;
+
+        public PaymentMethod SelectedMethod => _paymentSelectionStore.SelectedMethod;
 
         // Constructor
-        public PaymentProcessingViewModel(IPaymentFlowManager paymentFlowManager)
+        public PaymentProcessingViewModel(IPaymentFlowManager paymentFlowManager, PaymentSelectionStore paymentSelectionStore)
         {
             _paymentFlowManager = paymentFlowManager;
+            _paymentSelectionStore = paymentSelectionStore;
 
-            StartProcessing();
+            _ = ProcessPaymentAsync();
         }
 
         // Methods
-        private async void StartProcessing()
+        private async Task ProcessPaymentAsync()
         {
-            // 지연 시간(2초) >> 추후 API 작업으로 변경
-            await Task.Delay(2000);
+            try
+            {
+                switch (SelectedMethod)
+                {
+                    case PaymentMethod.Card:
+                        // 카드 결제 처리 API 호출
+                        await Task.Delay(2000);
+                        break;
+                    case PaymentMethod.Cash:
+                        // 현금 결제 처리 API 호출
+                        await Task.Delay(2000);
+                        break;
+                    case PaymentMethod.MobilePay:
+                        // 모바일 결제 처리 API 호출
+                        await Task.Delay(2000);
+                        break;
+                    default:
+                        return;
+                }
 
-            var method = _paymentFlowManager.GetSelectedMethod();
-
-            if (method == PaymentMethod.Card)
                 _paymentFlowManager.GoToNext();
-            else
-                _paymentFlowManager.GoToResult(true);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Payment processing error: {ex.Message}");
+            }
         }
     }
 }

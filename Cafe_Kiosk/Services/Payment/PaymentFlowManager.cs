@@ -1,6 +1,4 @@
-﻿using Cafe_Kiosk.Models;
-using Cafe_Kiosk.Models.Enums;
-using Cafe_Kiosk.Services.Cart;
+﻿using Cafe_Kiosk.Services.Cart;
 using Cafe_Kiosk.Services.Navi;
 using System;
 using System.Collections.Generic;
@@ -17,7 +15,6 @@ namespace Cafe_Kiosk.Services.Payment
         // Properties
         private readonly INavigationService _navigationService;
         private readonly ICartService _cartService;
-        private PaymentMethod _selectedMethod = PaymentMethod.None;
         private NaviType _current;
 
         // Constructor
@@ -29,9 +26,6 @@ namespace Cafe_Kiosk.Services.Payment
         }
 
         // Methods
-        public void SetSelectedMethod(PaymentMethod method) => _selectedMethod = method;
-        public PaymentMethod GetSelectedMethod() => _selectedMethod;
-
         public void GoToNext()
         {
             _current = _current switch
@@ -63,12 +57,6 @@ namespace Cafe_Kiosk.Services.Payment
         public void GoToStart()
         {
             _current = NaviType.PaymentStartView;
-            _navigationService.Navigate(_current);
-        }
-
-        public void GoToResult(bool isSuccess)
-        {
-            _current = NaviType.PaymentResultView;
             _navigationService.Navigate(_current);
         }
 

@@ -1,4 +1,7 @@
-﻿using Cafe_Kiosk.Stores;
+﻿using Cafe_Kiosk.Models.Enums;
+using Cafe_Kiosk.Services.Cart;
+using Cafe_Kiosk.Services.Payment;
+using Cafe_Kiosk.Stores;
 using Cafe_Kiosk.ViewModels;
 using Cafe_Kiosk.ViewModels.Payment;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,21 +35,27 @@ namespace Cafe_Kiosk.Services.Navi
                 case NaviType.PaymentStartView:
                     CurrentViewModel = (ViewModelBase)App.Current.Services.GetRequiredService(typeof(PaymentStartViewModel));
                     break;
+
                 case NaviType.PaymentMethodView:
                     CurrentViewModel = (ViewModelBase)App.Current.Services.GetRequiredService(typeof(PaymentMethodViewModel));
                     break;
+
                 case NaviType.PaymentProcessingView:
                     CurrentViewModel = (ViewModelBase)App.Current.Services.GetRequiredService(typeof(PaymentProcessingViewModel));
                     break;
+
                 case NaviType.PaymentWaitingView:
                     CurrentViewModel = (ViewModelBase)App.Current.Services.GetRequiredService(typeof(PaymentWaitingViewModel));
                     break;
+
                 case NaviType.PaymentResultView:
                     CurrentViewModel = (ViewModelBase)App.Current.Services.GetRequiredService(typeof(PaymentResultViewModel));
                     break;
+
                 case NaviType.ReceiptOptionView:
                     CurrentViewModel = (ViewModelBase)App.Current.Services.GetRequiredService(typeof(ReceiptOptionViewModel));
                     break;
+
                 default:
                     return;
             }

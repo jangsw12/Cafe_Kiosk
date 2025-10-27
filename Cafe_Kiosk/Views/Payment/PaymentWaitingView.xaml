@@ -4,9 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Cafe_Kiosk.Views.Payment" 
-             xmlns:fa6="http://schemas.fontawesome.com/icons/svg"
+             xmlns:fa6="http://schemas.fontawesome.com/icons/svg" 
+             xmlns:converters="clr-namespace:Cafe_Kiosk.Converters"
              mc:Ignorable="d" 
              d:DesignHeight="1000" d:DesignWidth="720">
+    
+    <UserControl.Resources>
+        <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+    </UserControl.Resources>
+
     <Grid Background="Transparent"
           Margin="20">
         <Grid.RowDefinitions>
@@ -20,38 +26,93 @@
                     HorizontalAlignment="Center"
                     Orientation="Vertical"
                     Margin="0 40">
-            <fa6:SvgAwesome Icon="Solid_CreditCard"
-                            Width="60"
-                            Height="60"
-                            PrimaryColor="#0078D7"
-                            Margin="0 0 0 20"/>
+
+            <!--Card Info-->
+            <StackPanel Orientation="Vertical"
+                        HorizontalAlignment="Center"
+                        Visibility="{Binding IsCardSelected, Converter={StaticResource BoolToVisibilityConverter}}">
+                <fa6:SvgAwesome Icon="Solid_CreditCard"
+                                Width="60" Height="60"
+                                PrimaryColor="#0078D7"
+                                Margin="0 0 0 20"/>
+                <TextBlock Text="카드를 삽입하거나 리더기에 접촉해주세요."
+                           FontSize="22"
+                           FontWeight="SemiBold"
+                           TextAlignment="Center"
+                           Foreground="Black"
+                           TextWrapping="Wrap"/>
+                <ProgressBar IsIndeterminate="True"
+                             Width="250" Height="15"
+                             Margin="0 30 0 0"
+                             Foreground="#0078D7"/>
+                <TextBlock Text="{Binding RemainingTimeText}"
+                           FontSize="16"
+                           Margin="0 20 0 0"
+                           Foreground="#444"
+                           TextAlignment="Center"/>
+            </StackPanel>
             
-            <TextBlock Text="카드를 삽입하거나 리더기에 접촉해주세요."
-                       FontSize="22"
-                       FontWeight="SemiBold"
-                       TextAlignment="Center"
-                       Foreground="Black"/>
+            <!--Cash Info-->
+            <StackPanel Orientation="Vertical"
+                        HorizontalAlignment="Center"
+                        Visibility="{Binding IsCashSelected, Converter={StaticResource BoolToVisibilityConverter}}">
+                <fa6:SvgAwesome Icon="Solid_MoneyBillWave"
+                                Width="60" Height="60"
+                                PrimaryColor="#2E8B57"
+                                Margin="0 0 0 20"/>
+                <TextBlock Text="현금 결제 안내"
+                           FontSize="22"
+                           FontWeight="SemiBold"
+                           TextAlignment="Center"
+                           Foreground="Black"/>
+                <TextBlock IsHitTestVisible="{Binding CashInfoText}"
+                           FontSize="18"
+                           Margin="0 20 0 0"
+                           Foreground="#444"
+                           TextAlignment="Center"/>
+            </StackPanel>
 
-            <ProgressBar IsIndeterminate="True"
-                         Width="250"
-                         Height="15"
-                         Margin="0 30 0 0"
-                         Foreground="#0078D7"/>
-
-            <TextBlock Text="{Binding RemainingTimeText}"
-                       FontSize="16"
-                       Margin="0 20 0 0"
-                       Foreground="#444"
-                       TextAlignment="Center"/>
+            <!--MobilePay Info-->
+            <StackPanel Orientation="Vertical"
+                        HorizontalAlignment="Center"
+                        Visibility="{Binding IsMobilePaySelected, Converter={StaticResource BoolToVisibilityConverter}}">
+                <fa6:SvgAwesome Icon="Solid_Qrcode"
+                                Width="60" Height="60"
+                                PrimaryColor="#FF8800"
+                                Margin="0 0 0 20"/>
+                <TextBlock Text="모바일 페이를 위해 QR 코드를 스캔해주세요."
+                           FontSize="22"
+                           FontWeight="SemiBold"
+                           TextAlignment="Center"
+                           Foreground="Black"
+                           TextWrapping="Wrap"/>
+                <ProgressBar IsIndeterminate="True"
+                             Width="250" Height="15"
+                             Margin="0 30 0 0"
+                             Foreground="#FF8800"/>
+                <TextBlock Text="{Binding RemainingTimeText}"
+                           FontSize="16"
+                           Margin="0 20 0 0"
+                           Foreground="#444"
+                           TextAlignment="Center"/>
+            </StackPanel>
         </StackPanel>
 
         <!--Buttons-->
-        <Button Grid.Row="1"
-                Content="결제 취소"
-                Width="150"
-                Height="45"
-                HorizontalAlignment="Right"
-                Margin="0 10 10 10"
-                Command="{Binding CancelCommand}"/>
+        <StackPanel Grid.Row="1"
+                    Margin="0 0 10 10"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+            <Button Content="결제 취소"
+                    Width="150" Height="45"
+                    HorizontalAlignment="Right"
+                    Margin="0 10 10 10"
+                    Command="{Binding CancelCommand}"/>
+            <Button Content="결제 진행(임의 버튼)"
+                    Width="150" Height="45"
+                    HorizontalAlignment="Right"
+                    Margin="0 10 10 10"
+                    Command="{Binding ProceedPaymentCommand}"/>
+        </StackPanel>
     </Grid>
 </UserControl>

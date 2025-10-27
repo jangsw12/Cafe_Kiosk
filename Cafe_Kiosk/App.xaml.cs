@@ -36,6 +36,7 @@ namespace Cafe_Kiosk
 
             // Stores
             services.AddSingleton<PaymentNavigationStore>();
+            services.AddSingleton<PaymentSelectionStore>();
 
             // Services
             services.AddSingleton<IMenuDataService, MenuDataService>();

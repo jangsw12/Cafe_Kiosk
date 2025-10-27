@@ -9,12 +9,9 @@ namespace Cafe_Kiosk.Services.Payment
 {
     public interface IPaymentFlowManager
     {
-        void SetSelectedMethod(PaymentMethod method);
-        PaymentMethod GetSelectedMethod();
         void GoToNext();
         void GoToPrevious();
         void GoToStart();
-        void GoToResult(bool isSuccess);
         void CompletePayment();
     }
 }

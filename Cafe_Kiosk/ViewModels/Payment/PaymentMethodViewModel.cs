@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows;
 using Cafe_Kiosk.Services.Payment;
-using Cafe_Kiosk.Models.Enums;
+using Cafe_Kiosk.Stores;
 
 namespace Cafe_Kiosk.ViewModels.Payment
 {
@@ -16,6 +16,7 @@ namespace Cafe_Kiosk.ViewModels.Payment
     {
         // Properties
         private readonly IPaymentFlowManager _paymentFlowManager;
+        private readonly PaymentSelectionStore _paymentSelectionStore;
 
         private bool _isCardSelected;
 
@@ -140,9 +141,10 @@ namespace Cafe_Kiosk.ViewModels.Payment
         public ICommand ProceedPaymentCommand { get; set; }
 
         // Constructor
-        public PaymentMethodViewModel(IPaymentFlowManager paymentFlowManager)
+        public PaymentMethodViewModel(IPaymentFlowManager paymentFlowManager, PaymentSelectionStore paymentSelectionStore)
         {
             _paymentFlowManager = paymentFlowManager;
+            _paymentSelectionStore = paymentSelectionStore;
 
             GoBackCommand = new RelayCommand<object>(GoBack);
             ProceedPaymentCommand = new RelayCommand<object>(ProceedPayment, CanProceedPayment);
@@ -157,11 +159,17 @@ namespace Cafe_Kiosk.ViewModels.Payment
         private void ProceedPayment(object _)
         {
             if (IsCardSelected)
-                _paymentFlowManager.SetSelectedMethod(PaymentMethod.Card);
+            {
+                _paymentSelectionStore.SetCardPayment(CardNumber, CardExpiry, CardCVC);
+            }
             else if (IsCashSelected)
-                _paymentFlowManager.SetSelectedMethod(PaymentMethod.Cash);
+            {
+                _paymentSelectionStore.SetCashPayment();
+            }
             else if (IsMobilePaySelected)
-                _paymentFlowManager.SetSelectedMethod(PaymentMethod.MobilePay);
+            {
+                _paymentSelectionStore.SetMobilePayPayment();
+            }
 
             _paymentFlowManager.GoToNext();
         }
@@ -174,20 +182,14 @@ namespace Cafe_Kiosk.ViewModels.Payment
                     && !string.IsNullOrWhiteSpace(CardExpiry)
                     && !string.IsNullOrWhiteSpace(CardCVC);
             }
-            else if (IsMobilePaySelected || IsCashSelected)
-            {
-                return true;
-            }
 
-            return false;
+            return IsCashSelected || IsMobilePaySelected;
         }
 
         private void RaiseCanExecuteChanged()
         {
             if (ProceedPaymentCommand is RelayCommand<object> cmd)
-            {
                 cmd.RaiseCanExecuteChanged();
-            }
         }
     }
 }

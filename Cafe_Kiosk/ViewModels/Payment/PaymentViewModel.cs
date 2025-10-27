@@ -13,6 +13,7 @@ using System.Windows;
 using System.Windows.Input;
 using Cafe_Kiosk.Commands;
 using Cafe_Kiosk.Services.Payment;
+using Cafe_Kiosk.Models.Enums;
 
 namespace Cafe_Kiosk.ViewModels.Payment
 {
@@ -21,7 +22,6 @@ namespace Cafe_Kiosk.ViewModels.Payment
         // Properties
         private readonly PaymentNavigationStore _paymentNavigationStore;
         private readonly IPaymentFlowManager _paymentFlowManager;
-        private readonly ICartService _cartService;
 
         private INotifyPropertyChanged? _currentViewModel;
 
@@ -38,21 +38,18 @@ namespace Cafe_Kiosk.ViewModels.Payment
         }
 
         // Constructor
-        public PaymentViewModel(PaymentNavigationStore paymentNavigationStore, IPaymentFlowManager paymentFlowManager, 
-                                ICartService cartService)
+        public PaymentViewModel(PaymentNavigationStore paymentNavigationStore, IPaymentFlowManager paymentFlowManager)
         {
             _paymentNavigationStore = paymentNavigationStore;
             _paymentFlowManager = paymentFlowManager;
 
-            _cartService = cartService;
-
-            _paymentNavigationStore.CurrentViewModelChanged += CurrentViewModelChanged;
+            _paymentNavigationStore.CurrentViewModelChanged += OnCurrentViewModelChanged;
 
             _paymentFlowManager.GoToStart();
         }
 
         // Methods
-        private void CurrentViewModelChanged()
+        private void OnCurrentViewModelChanged()
         {
             CurrentViewModel = _paymentNavigationStore.CurrentViewModel;
         }

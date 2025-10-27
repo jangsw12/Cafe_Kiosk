@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cafe_Kiosk.Models.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -18,8 +19,8 @@ namespace Cafe_Kiosk.Stores
 				_currentViewModel = value;
                 CurrentViewModelChanged?.Invoke();
                 _currentViewModel = null;
-			}
-		}
+            }
+        }
 
         public Action? CurrentViewModelChanged { get; set; }
     }

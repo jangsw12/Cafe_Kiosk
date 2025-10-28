@@ -65,7 +65,7 @@
                            FontWeight="SemiBold"
                            TextAlignment="Center"
                            Foreground="Black"/>
-                <TextBlock IsHitTestVisible="{Binding CashInfoText}"
+                <TextBlock Text="{Binding CashInfoText}"
                            FontSize="18"
                            Margin="0 20 0 0"
                            Foreground="#444"

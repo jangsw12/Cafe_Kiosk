@@ -22,3 +22,6 @@ wpf로 작성한 카페 키오스크 프로그램입니다.
 ## 시연 영상
 
 ![Demo GIF](Cafe_Kiosk/Assets/Animation.gif)
+
+
+![Demo GIF](Cafe_Kiosk/Assets/Animation2.gif)

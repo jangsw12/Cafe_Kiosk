@@ -54,7 +54,7 @@ namespace Cafe_Kiosk.ViewModels.Payment
         public string CardExpiry => _paymentSelectionStore.CardExpiry;
         public string CardCVC => _paymentSelectionStore.CardCVC;
 
-        public string CashInfoText => $"총 {TotalCartPrice}원을 투입해주세요.";
+        public string CashInfoText => $"총 {TotalCartPrice:N0}원을 투입해주세요.";
 
         // Commands
         public ICommand CancelCommand { get; set; }

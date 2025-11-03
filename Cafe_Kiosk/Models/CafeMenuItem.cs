@@ -14,7 +14,18 @@ namespace Cafe_Kiosk.Models
 {
     public class CafeMenuItem : ViewModelBase
     {
-        private string _name;
+        private int _id;
+
+        public int Id
+        {
+            get { return _id; }
+            set {
+                _id = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private string _name = string.Empty;
 
         public string Name
         {
@@ -37,7 +48,7 @@ namespace Cafe_Kiosk.Models
             }
         }
 
-        private string _category;
+        private string _category = string.Empty;
 
         public string Category
         {
@@ -48,7 +59,7 @@ namespace Cafe_Kiosk.Models
             }
         }
 
-        private string _image;
+        private string _image = string.Empty;
 
         public string Image
         {
@@ -57,14 +68,6 @@ namespace Cafe_Kiosk.Models
             { 
                 _image = value;
                 OnPropertyChanged();
-            }
-        }
-
-        public Uri ImageUri
-        {
-            get
-            {
-                return new Uri($"/Cafe_Kiosk;component/{Image}", UriKind.Relative);
             }
         }
     }

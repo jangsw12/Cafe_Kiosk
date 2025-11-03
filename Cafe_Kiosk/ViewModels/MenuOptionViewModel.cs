@@ -21,7 +21,6 @@ namespace Cafe_Kiosk.ViewModels
         private readonly CafeMenuItem _selectedItem;
         private readonly IDialogService _dialogService;
         private readonly ICartService _cartService;
-        public Uri ImageUri => _selectedItem.ImageUri;
 
         public int TotalPrice
         {

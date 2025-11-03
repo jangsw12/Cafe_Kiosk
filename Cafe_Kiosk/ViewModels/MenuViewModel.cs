@@ -12,22 +12,23 @@ using System.IO;
 using Cafe_Kiosk.ViewModels;
 using System.Windows;
 using Cafe_Kiosk.Views;
-using Cafe_Kiosk.Services.MenuData;
 using Cafe_Kiosk.Services.Dialog;
 using Cafe_Kiosk.Commands;
 using FontAwesome6.Svg;
+using Cafe_Kiosk.Services.API;
 
 namespace Cafe_Kiosk.ViewModels
 {
     public class MenuViewModel : ViewModelBase
     {
         // Properties
-        private readonly IMenuDataService _menuDataService;
         private readonly IDialogService _dialogService;
+        private readonly IMenuApiService _menuApiService;
 
-        private List<CafeMenuItem> _allMenuItems;
+        public ObservableCollection<CafeMenuItem> MenuItems { get; } = new();
 
         private readonly List<string> _categories = new() { "All", "Coffee", "Latte", "Tea" };
+
         public string CurrentIcon => CurrentCategory switch
         {
             "All" => "Solid_GripLines",
@@ -49,23 +50,47 @@ namespace Cafe_Kiosk.ViewModels
         public ICommand MenuItemClickCommand { get; set; }
 
         // Constructor
-        public MenuViewModel(IMenuDataService menuDataService, IDialogService dialogService)
+        public MenuViewModel(IDialogService dialogService, IMenuApiService menuApiService)
         {
-            _menuDataService = menuDataService;
             _dialogService = dialogService;
+            _menuApiService = menuApiService;
 
             NextCategoryCommand = new RelayCommand<object>(NextCategory);
             PreviousCategoryCommand = new RelayCommand<object>(PreviousCategory);
             MenuItemClickCommand = new RelayCommand<CafeMenuItem>(MenuItemClick);
 
-            LoadMenu();
+            LoadMenuAsync();
         }
 
-        // Methods
-        private void LoadMenu()
+        private async void LoadMenuAsync()
         {
-            _allMenuItems = _menuDataService.LoadCafeMenu();
-            ApplyFilter();
+            try
+            {
+                var items = await _menuApiService.GetCafeMenuAsync();
+
+                if (items == null || items.Count == 0)
+                {
+                    MessageBox.Show("데이터가 없습니다. DB 또는 API 연결을 확인하세요.");
+                    return;
+                }
+
+                MenuItems.Clear();
+                foreach (var item in items)
+                {
+                    if (!string.IsNullOrEmpty(item.Image) && !item.Image.StartsWith("http"))
+                    {
+                        item.Image = $"pack://application:,,,/Images/{item.Image}";
+                    }
+
+                    MenuItems.Add(item);
+                }
+
+                ApplyFilter();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"API 호출 실패: {ex.Message}");
+            }
         }
 
         private void ApplyFilter()
@@ -73,8 +98,8 @@ namespace Cafe_Kiosk.ViewModels
             FilteredMenuItems.Clear();
 
             var filtered = CurrentCategory == "All"
-                ? _allMenuItems
-                : _allMenuItems.Where(item => item.Category == CurrentCategory);
+                ? MenuItems
+                : MenuItems.Where(item => item.Category == CurrentCategory);
 
             foreach (var item in filtered)
                 FilteredMenuItems.Add(item);
@@ -97,6 +122,9 @@ namespace Cafe_Kiosk.ViewModels
 
         private void MenuItemClick(CafeMenuItem selectedItem)
         {
+            if (selectedItem == null)
+                return;
+
             _dialogService.ShowMenuOptionDialog(selectedItem);
         }
     }

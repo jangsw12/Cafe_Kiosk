@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cafe_Kiosk.Services.MenuData
+namespace Cafe_Kiosk.Services.API
 {
-    public interface IMenuDataService
+    public interface IMenuApiService
     {
-        List<CafeMenuItem> LoadCafeMenu();
+        Task<List<CafeMenuItem>> GetCafeMenuAsync();
     }
 }

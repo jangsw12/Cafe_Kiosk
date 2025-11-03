@@ -1,7 +1,7 @@
 ﻿using Cafe_Kiosk.Services;
+using Cafe_Kiosk.Services.API;
 using Cafe_Kiosk.Services.Cart;
 using Cafe_Kiosk.Services.Dialog;
-using Cafe_Kiosk.Services.MenuData;
 using Cafe_Kiosk.Services.Navi;
 using Cafe_Kiosk.Services.Payment;
 using Cafe_Kiosk.Stores;
@@ -39,7 +39,7 @@ namespace Cafe_Kiosk
             services.AddSingleton<PaymentSelectionStore>();
 
             // Services
-            services.AddSingleton<IMenuDataService, MenuDataService>();
+            services.AddSingleton<IMenuApiService, MenuApiService>();
             services.AddSingleton<IDialogService, DialogService>();
             services.AddSingleton<ICartService, CartService>();
             services.AddSingleton<INavigationService, NavigationService>();

@@ -74,18 +74,16 @@ namespace Cafe_Kiosk.ViewModels
                     return;
                 }
 
-                MenuItems.Clear();
-                foreach (var item in items)
+                Application.Current.Dispatcher.Invoke(() =>
                 {
-                    if (!string.IsNullOrEmpty(item.Image) && !item.Image.StartsWith("http"))
+                    MenuItems.Clear();
+                    foreach (var item in items)
                     {
-                        item.Image = $"pack://application:,,,/Images/{item.Image}";
+                        MenuItems.Add(item);
                     }
-
-                    MenuItems.Add(item);
-                }
-
-                ApplyFilter();
+    
+                    ApplyFilter();
+                });
             }
             catch (Exception ex)
             {

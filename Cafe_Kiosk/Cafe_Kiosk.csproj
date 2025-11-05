@@ -9,32 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\americano.png" />
-    <None Remove="Images\default.png" />
-    <None Remove="Images\latte.png" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="FontAwesome6.Svg" Version="2.5.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.9" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\americano.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\default.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\latte.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Data\menu.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Update="Image\americano.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>

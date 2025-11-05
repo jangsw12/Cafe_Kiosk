@@ -22,6 +22,8 @@ namespace Cafe_Kiosk.ViewModels
         private readonly IDialogService _dialogService;
         private readonly ICartService _cartService;
 
+        public string Image => _selectedItem?.Image;
+
         public int TotalPrice
         {
             get

@@ -58,9 +58,9 @@
                                             BorderBrush="LightGray"
                                             BorderThickness="1"
                                             CornerRadius="4">
-                                        <Image Source="{Binding MenuItem.ImageUri}"
+                                        <Image Source="{Binding MenuItem.Image}"
                                                Stretch="Uniform"
-                                               Visibility="{Binding MenuItem.ImageUri, Converter={StaticResource NullToVisibilityConverter}}"/>
+                                               Visibility="{Binding MenuItem.Image, Converter={StaticResource NullToVisibilityConverter}}"/>
                                     </Border>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>

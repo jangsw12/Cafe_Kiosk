@@ -45,7 +45,7 @@
                                 VerticalAlignment="Center" HorizontalAlignment="Center"
                                 BorderBrush="LightGray"
                                 BorderThickness="1">
-                            <Image Source="{Binding MenuItem.ImageUri}"
+                            <Image Source="{Binding MenuItem.Image}"
                                    Stretch="Uniform"/>
                         </Border>
                         

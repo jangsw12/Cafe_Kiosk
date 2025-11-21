@@ -12,6 +12,7 @@ using Cafe_Kiosk.Models;
 using System.Collections.ObjectModel;
 using Cafe_Kiosk.Services.Cart;
 using Cafe_Kiosk.Stores;
+using System.Windows;
 
 namespace Cafe_Kiosk.ViewModels.Payment
 {
@@ -50,9 +51,8 @@ namespace Cafe_Kiosk.ViewModels.Payment
 
         public string RemainingTimeText => $"남은 시간 : {RemainingSeconds}초";
 
-        public string CardNumber => _paymentSelectionStore.CardNumber;
-        public string CardExpiry => _paymentSelectionStore.CardExpiry;
-        public string CardCVC => _paymentSelectionStore.CardCVC;
+        // 카드 정보
+        public CardInfo? Card => _paymentSelectionStore.Card;
 
         public string CashInfoText => $"총 {TotalCartPrice:N0}원을 투입해주세요.";
 
@@ -77,14 +77,28 @@ namespace Cafe_Kiosk.ViewModels.Payment
         // Methods
         private void Cancel(object _)
         {
-            _cts?.Cancel();
-            _paymentFlowManager.GoToPrevious();
+            try
+            {
+                _cts?.Cancel();
+                _paymentFlowManager.GoToPrevious();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"취소 중 오류 발생: {ex.Message}");
+            }
         }
 
         private void ProceedPayment(object _)
         {
-            _cts?.Cancel();
-            _paymentFlowManager.GoToNext();
+            try
+            {
+                _cts?.Cancel();
+                _paymentFlowManager.GoToNext();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"다음 단계 이동 중 오류 발생: {ex.Message}");
+            }
         }
 
         private async void StartWaiting()
@@ -107,12 +121,17 @@ namespace Cafe_Kiosk.ViewModels.Payment
             {
                 // 대기 타이머 취소
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"결제 대기 중 오류 발생: {ex.Message}");
+                _paymentFlowManager.GoToPrevious();
+            }
         }
 
         private void AutoCancel()
         {
             // 결제 시간 초과
-            System.Windows.MessageBox.Show("결제 시간이 초과되었습니다. 결제를 다시 시도해주세요.");
+            MessageBox.Show("결제 시간이 초과되었습니다. 결제를 다시 시도해주세요.");
             _paymentFlowManager.GoToPrevious();
         }
     }

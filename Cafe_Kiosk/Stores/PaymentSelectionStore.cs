@@ -1,4 +1,5 @@
-﻿using Cafe_Kiosk.Models.Enums;
+﻿using Cafe_Kiosk.Models;
+using Cafe_Kiosk.Models.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,29 +11,26 @@ namespace Cafe_Kiosk.Stores
     public class PaymentSelectionStore
     {
         public PaymentMethod SelectedMethod { get; private set; } = PaymentMethod.None;
+        public CardInfo Card { get; private set; } = new();
 
-        public string CardNumber { get; private set; } = string.Empty;
-        public string CardExpiry { get; private set; } = string.Empty;
-        public string CardCVC { get; private set; } = string.Empty;
-    
-        public void SetCardPayment(string cardNumber, string expiry, string cvc)
+        public void SetCardPayment(string number, string expiry, string cvc)
         {
             SelectedMethod = PaymentMethod.Card;
-            CardNumber = cardNumber;
-            CardExpiry = expiry;
-            CardCVC = cvc;
+            Card.Number = number;
+            Card.Expiry = expiry;
+            Card.CVC = cvc;
         }
 
         public void SetCashPayment()
         {
             SelectedMethod = PaymentMethod.Cash;
-            CardNumber = CardExpiry = CardCVC = string.Empty;
+            Card = new CardInfo();
         }
 
         public void SetMobilePayPayment()
         {
             SelectedMethod = PaymentMethod.MobilePay;
-            CardNumber = CardExpiry = CardCVC = string.Empty;
+            Card = new CardInfo();
         }
     }
 }

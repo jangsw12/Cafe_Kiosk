@@ -40,11 +40,12 @@ namespace Cafe_Kiosk
 
             // Services
             services.AddSingleton<IMenuApiService, MenuApiService>();
+            services.AddSingleton<IPaymentApiService, PaymentApiService>();
             services.AddSingleton<IDialogService, DialogService>();
             services.AddSingleton<ICartService, CartService>();
             services.AddSingleton<INavigationService, NavigationService>();
             services.AddSingleton<IPaymentFlowManager, PaymentFlowManager>();
-
+            
             // ViewModels
             services.AddSingleton<MainViewModel>();
             services.AddSingleton<MenuViewModel>();

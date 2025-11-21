@@ -137,8 +137,8 @@ namespace Cafe_Kiosk.ViewModels.Payment
         public bool IsCardCVCInValid => string.IsNullOrWhiteSpace(CardCVC);
 
         // Commands
-        public ICommand GoBackCommand { get; set; }
-        public ICommand ProceedPaymentCommand { get; set; }
+        public ICommand GoBackCommand { get; }
+        public ICommand ProceedPaymentCommand { get; }
 
         // Constructor
         public PaymentMethodViewModel(IPaymentFlowManager paymentFlowManager, PaymentSelectionStore paymentSelectionStore)

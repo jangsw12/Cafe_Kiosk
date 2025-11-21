@@ -136,32 +136,6 @@ namespace Cafe_Kiosk.Models
                 _ => string.Empty
             };
 
-        //public string DisplayTemperature =>
-        //    SelectedTemperature switch
-        //    {
-        //        Temperature.Ice => "아이스",
-        //        Temperature.Hot => "뜨겁게",
-        //        _ => string.Empty
-        //    };
-
-        //public string DisplayIceAmount
-        //{
-        //    get
-        //    {
-        //        if (SelectedTemperature == Temperature.Hot)
-        //            return string.Empty;
-
-        //        return SelectedIceAmount switch
-        //        {
-        //            IceAmount.None => "얼음 없음",
-        //            IceAmount.Less => "얼음 적게",
-        //            IceAmount.Regular => "얼음 보통",
-        //            IceAmount.More => "얼음 많이",
-        //            _ => string.Empty
-        //        };
-        //    }
-        //}
-
         public string DisplayTemperatureWithIce
         {
             get
